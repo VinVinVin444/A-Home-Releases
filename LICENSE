@@ -1,0 +1,42 @@
+A-Home Proprietary Software License
+
+Copyright (c) 2026 岛民Vin. All rights reserved.
+
+1. License grant
+
+Subject to a valid A-Home license and the applicable purchase terms, the copyright owner grants the license holder a limited, non-exclusive, non-transferable, revocable right to install and use the distributed A-Home plugin for personal or internal business purposes on the number of devices allowed by the purchased plan.
+
+2. Restrictions
+
+Except where applicable law expressly permits otherwise, the license holder may not:
+
+- Redistribute, sublicense, sell, rent, lease, publish, or commercially exploit the plugin or modified copies of it.
+- Circumvent, remove, disable, or interfere with license verification or access controls.
+- Use the plugin or any substantial part of it to create or distribute a competing derivative product.
+- Claim ownership of the plugin, its branding, or its original assets.
+
+The license holder may keep reasonable backup copies solely for their own licensed use.
+
+3. User data
+
+This license does not claim ownership of notes, tasks, records, settings, or other content created by the user. The user remains responsible for backups and for compliance with the terms of any sync, storage, weather, or other third-party service they configure.
+
+4. Third-party components
+
+Third-party components bundled with A-Home remain governed by their respective licenses. Required notices are provided in THIRD_PARTY_NOTICES.md. Nothing in this license limits rights granted by those third-party licenses.
+
+5. Updates and services
+
+Updates, compatibility changes, online licensing services, and support may be provided according to the applicable purchase terms. No specific feature, platform, or service availability is guaranteed unless separately agreed in writing.
+
+6. Disclaimer
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, A-HOME IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. THE COPYRIGHT OWNER IS NOT LIABLE FOR DATA LOSS, BUSINESS INTERRUPTION, LOST PROFITS, OR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM USE OF OR INABILITY TO USE THE SOFTWARE.
+
+7. Termination
+
+This license terminates if the license holder materially breaches these terms. Upon termination, the license holder must stop using and delete distributed copies of A-Home, except for user-created Vault data, which remains the user's property.
+
+8. Contact
+
+Questions about commercial licensing may be directed to the author through the official channels listed in README.md.
