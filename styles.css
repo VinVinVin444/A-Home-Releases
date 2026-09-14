@@ -348,15 +348,16 @@
 }
 
 .dashboard-home__hero-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: max-content;
+  align-items: start;
+  justify-items: stretch;
   gap: 6px;
   justify-content: flex-start;
   position: relative;
   z-index: 80;
   align-self: flex-end;
-  width: 100%;
+  width: max-content;
   max-height: 100%;
   contain: layout style;
 }
@@ -364,9 +365,11 @@
 .dashboard-home__hero-actions-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--dashboard-hero-control-gap);
   width: 100%;
+  max-width: 100%;
+  margin-left: auto;
   padding: 0;
   border: 1px solid transparent;
   border-radius: var(--dashboard-node-radius);
@@ -451,7 +454,7 @@
 .dashboard-home__hero-height-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--dashboard-hero-control-gap);
   width: 100%;
   min-width: 0;
@@ -463,16 +466,17 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 0;
-  margin-left: auto;
-  width: calc(var(--dashboard-hero-control-size) * 12 + var(--dashboard-hero-control-gap) * 11);
-  min-width: calc(var(--dashboard-hero-control-size) * 12 + var(--dashboard-hero-control-gap) * 11);
+  margin-left: 0;
+  width: max-content;
+  min-width: 0;
+  flex: 0 0 auto;
   contain: layout style;
 }
 
 .dashboard-home__hero-top-section-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--dashboard-hero-control-gap);
   width: 100%;
   min-width: 0;
@@ -481,11 +485,18 @@
 
 .dashboard-home__hero-control-buttons {
   display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--dashboard-hero-control-size);
+  grid-template-columns: none;
+  grid-auto-rows: var(--dashboard-hero-control-size);
   align-items: center;
   justify-content: end;
   gap: var(--dashboard-hero-control-gap);
   width: max-content;
-  margin-left: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin-left: 0;
   contain: layout style;
 }
 
@@ -525,7 +536,8 @@
   justify-content: flex-start;
   gap: 6px;
   flex: 0 0 auto;
-  min-width: 0;
+  width: var(--dashboard-hero-control-meta-width);
+  min-width: var(--dashboard-hero-control-meta-width);
   white-space: nowrap;
   color: rgba(248, 251, 255, 0.92);
   text-shadow: none;
@@ -813,13 +825,15 @@
 }
 
 .dashboard-home__hero-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content;
   gap: 6px;
-  justify-content: flex-end;
+  justify-content: end;
+  justify-items: stretch;
 }
 
 .dashboard-home .dashboard-home__hero-actions {
-  align-items: center;
+  align-items: start;
   align-self: flex-start;
   max-height: 100%;
 }
@@ -854,6 +868,551 @@
     width: min(420px, calc(100vw - 32px));
   }
   /* END Banner Shared Block: responsive hero adjustments */
+}
+
+/* 非聚焦教程独立窗口：主页保持可操作，标题栏拖动，右下角缩放。 */
+.dashboard-home__tutorial-window-host {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dashboard-home__tutorial-window {
+  --dashboard-node-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 1040px;
+  height: 720px;
+  min-width: 620px;
+  min-height: 440px;
+  transform: translate3d(0, 0, 0);
+  overflow: hidden;
+  pointer-events: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-primary);
+  box-shadow: 0 14px 38px rgba(20, 35, 55, 0.24);
+  color: var(--text-normal);
+  contain: layout paint style;
+  backface-visibility: hidden;
+}
+
+.dashboard-home__tutorial-window.is-restoring-geometry {
+  visibility: hidden;
+}
+
+.dashboard-home__tutorial-window.is-window-manipulating {
+  user-select: none;
+  will-change: transform, width, height;
+}
+
+.dashboard-home__tutorial-window.is-window-dragging {
+  box-shadow: none;
+  will-change: transform;
+}
+
+.dashboard-home__tutorial-window.is-window-manipulating .dashboard-home__tutorial-window-body {
+  pointer-events: none;
+}
+
+.dashboard-home__tutorial-window-titlebar {
+  position: relative;
+  z-index: 6;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(220px, 420px) minmax(190px, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 46px;
+  padding: 6px 10px 6px 16px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  cursor: move;
+  user-select: none;
+  touch-action: none;
+}
+
+.dashboard-home__tutorial-window-name {
+  justify-self: start;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  width: min(100%, 420px);
+  min-width: 0;
+  cursor: text;
+}
+
+.dashboard-home__tutorial-search-icon {
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dashboard-home__tutorial-search-input {
+  width: 100%;
+  height: 34px;
+  padding: 5px 30px 5px 34px !important;
+  border-radius: var(--dashboard-node-radius) !important;
+  background: var(--background-primary) !important;
+}
+
+.dashboard-home__tutorial-search-results {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  z-index: 20;
+  display: none;
+  width: 100%;
+  max-height: min(430px, 55vh);
+  padding: 6px;
+  overflow-y: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-primary);
+  box-shadow: 0 10px 26px rgba(20, 35, 55, 0.2);
+  cursor: default;
+}
+
+.dashboard-home__tutorial-search-results.is-open {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dashboard-home__tutorial-search-result {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 7px;
+  align-items: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 6px 8px;
+  border-radius: var(--dashboard-node-radius) !important;
+  text-align: left;
+}
+
+.dashboard-home__tutorial-search-result-icon {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-search-result-title {
+  color: var(--text-normal);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-search-result-path {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.dashboard-home__tutorial-search-empty {
+  padding: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.dashboard-home__tutorial-window-title-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: end;
+}
+
+.dashboard-home__tutorial-window-visual-toggle,
+.dashboard-home__tutorial-window-close {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: var(--dashboard-node-radius) !important;
+}
+
+.dashboard-home__tutorial-window-visual-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: auto;
+  min-width: 82px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.dashboard-home__tutorial-window-visual-toggle-icon {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+.dashboard-home__tutorial-window-visual-toggle.is-active {
+  border-color: var(--interactive-accent) !important;
+  background: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
+}
+
+.dashboard-home__tutorial-window-body {
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: calc(100% - 46px);
+  min-height: 0;
+}
+
+.dashboard-home__tutorial-tabs {
+  display: flex;
+  grid-row: 1 / span 2;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 1px solid var(--background-modifier-border);
+  background: var(--background-primary-alt);
+}
+
+.dashboard-home__tutorial-tab {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 6px 8px;
+  border-radius: var(--dashboard-node-radius) !important;
+  text-align: left;
+}
+
+.dashboard-home__tutorial-tab-index {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-tab-label {
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.dashboard-home__tutorial-tab.is-active {
+  border-color: var(--interactive-accent) !important;
+  background: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
+}
+
+.dashboard-home__tutorial-tab.is-active .dashboard-home__tutorial-tab-index {
+  color: inherit;
+}
+
+.dashboard-home__tutorial-content {
+  display: grid;
+  grid-template-columns: 380px minmax(320px, 1fr);
+  gap: 18px;
+  min-height: 0;
+  padding: 18px;
+  overflow: auto;
+}
+
+.dashboard-home__tutorial-content.has-directory {
+  grid-template-columns: 380px max-content minmax(320px, 1fr);
+  min-width: 940px;
+}
+
+.dashboard-home__tutorial-content.is-visual-hidden {
+  grid-template-columns: minmax(320px, 1fr);
+}
+
+.dashboard-home__tutorial-content.has-directory.is-visual-hidden {
+  grid-template-columns: max-content minmax(320px, 1fr);
+  min-width: 542px;
+}
+
+.dashboard-home__tutorial-visual {
+  width: 380px;
+  min-width: 380px;
+  max-width: 380px;
+  align-self: start;
+}
+
+.dashboard-home__tutorial-directory {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: max-content;
+  min-width: 190px;
+  max-width: none;
+  padding: 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-secondary);
+}
+
+.dashboard-home__tutorial-directory-title {
+  margin-bottom: 3px;
+  color: var(--text-normal);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-directory-section {
+  padding: 5px 7px 2px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.dashboard-home__tutorial-directory-section.is-secondary {
+  margin-top: 8px;
+  padding-top: 11px;
+  border-top: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+.dashboard-home__tutorial-directory-item {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+  height: auto !important;
+  min-height: 42px;
+  padding: 6px;
+  border-radius: var(--dashboard-node-radius) !important;
+  text-align: left;
+  white-space: normal;
+}
+
+.dashboard-home__tutorial-directory-item.is-active {
+  border-color: var(--interactive-accent) !important;
+  background: var(--background-primary-alt) !important;
+  color: var(--text-normal) !important;
+}
+
+.dashboard-home__tutorial-directory-index {
+  align-self: center;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-directory-label {
+  display: block;
+  align-self: center;
+  font-size: 12px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.dashboard-home__tutorial-explanation {
+  min-width: 0;
+  padding: 4px 8px;
+  overflow-y: auto;
+}
+
+.dashboard-home__tutorial-feature-list {
+  margin: 14px 0 0;
+  padding-left: 22px;
+  color: var(--text-normal);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.dashboard-home__tutorial-feature-list li + li {
+  margin-top: 7px;
+}
+
+.dashboard-home__tutorial-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.dashboard-home__tutorial-group {
+  padding: 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-secondary);
+}
+
+.dashboard-home__tutorial-group.is-important {
+  border-color: var(--interactive-accent);
+  background: var(--background-primary-alt);
+}
+
+.dashboard-home__tutorial-group-title {
+  margin-bottom: 9px;
+  color: var(--text-normal);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-group-try-tip {
+  margin: 2px 0 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--interactive-accent);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-primary-alt);
+  color: var(--text-normal);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.dashboard-home__tutorial-icon-item {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 9px;
+  align-items: start;
+  padding: 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius, 8px);
+  background: var(--background-primary);
+}
+
+.dashboard-home__tutorial-icon-item + .dashboard-home__tutorial-icon-item {
+  margin-top: 6px;
+}
+
+.dashboard-home__tutorial-icon-item.is-search-highlight,
+.dashboard-home__tutorial-group.is-search-highlight {
+  border-radius: var(--dashboard-node-radius);
+  background: color-mix(in srgb, var(--interactive-accent) 18%, transparent);
+  box-shadow: inset 0 0 0 2px var(--interactive-accent);
+}
+
+.dashboard-home__tutorial-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  align-self: start;
+  place-items: center;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius, 8px);
+  background: var(--background-primary);
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 17px;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-icon-name {
+  color: var(--text-normal);
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-icon-description {
+  margin-top: 2px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.dashboard-home__tutorial-footer,
+.dashboard-home__tutorial-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-home__tutorial-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-column: 2;
+  justify-content: stretch;
+  padding: 10px 14px;
+  border-top: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+}
+
+.dashboard-home__tutorial-progress {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.dashboard-home__tutorial-navigation {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.dashboard-home__tutorial-window-resize {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  z-index: 4;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  place-items: center;
+  border-radius: var(--dashboard-node-radius) !important;
+  background: var(--background-secondary) !important;
+  color: var(--text-muted) !important;
+  cursor: nwse-resize;
+  touch-action: none;
+}
+
+@media (max-width: 760px) {
+  .dashboard-home__tutorial-window-titlebar {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .dashboard-home__tutorial-window-name {
+    display: none;
+  }
+
+  .dashboard-home__tutorial-search {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .dashboard-home__tutorial-window {
+    min-width: 0;
+    min-height: 360px;
+  }
+
+  .dashboard-home__tutorial-window-body {
+    grid-template-columns: 116px minmax(0, 1fr);
+  }
+
+  .dashboard-home__tutorial-content {
+    grid-template-columns: 380px minmax(320px, 1fr);
+    padding: 10px;
+  }
+
+  .dashboard-home__tutorial-content.has-directory {
+    grid-template-columns: 380px max-content minmax(320px, 1fr);
+  }
+
+  .dashboard-home__tutorial-content.is-visual-hidden {
+    grid-template-columns: minmax(320px, 1fr);
+  }
+
+  .dashboard-home__tutorial-content.has-directory.is-visual-hidden {
+    grid-template-columns: max-content minmax(320px, 1fr);
+    min-width: 542px;
+  }
+
+  .dashboard-home__tutorial-window-resize {
+    display: none;
+  }
 }
 
 /* Desktop narrow-window fallback: preserve module card width and scroll only the rows horizontally. */
@@ -20130,6 +20689,176 @@ details:not([open]) .dashboard-home__collapse-icon {
 .dashboard-home__license-preview-button.is-primary {
   color: var(--text-on-accent);
   background: var(--interactive-accent);
+}
+
+/* ===== 首次使用教程：轻量 SVG 示意图，不依赖外部图片资源 ===== */
+.dashboard-home__tutorial-modal {
+  width: min(760px, calc(100vw - 32px));
+  max-width: 760px;
+  border-radius: var(--dashboard-node-radius) !important;
+  overflow: hidden;
+}
+
+.dashboard-home__tutorial-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px;
+}
+
+.dashboard-home__tutorial-header,
+.dashboard-home__tutorial-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-home__tutorial-header {
+  justify-content: space-between;
+}
+
+.dashboard-home__tutorial-kicker,
+.dashboard-home__tutorial-title {
+  color: var(--text-normal);
+  font-weight: 800;
+}
+
+.dashboard-home__tutorial-kicker {
+  font-size: 18px;
+}
+
+.dashboard-home__tutorial-progress,
+.dashboard-home__tutorial-description {
+  color: var(--text-muted);
+}
+
+.dashboard-home__tutorial-try-tip {
+  margin: 14px 0 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--interactive-accent);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-primary-alt);
+  color: var(--text-normal);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-visual {
+  overflow: hidden;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--dashboard-node-radius);
+  background: var(--background-secondary);
+}
+
+.dashboard-home__tutorial-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tutorial-svg__shell {
+  fill: var(--background-primary);
+  stroke: var(--background-modifier-border);
+  stroke-width: 2;
+}
+
+.tutorial-svg__banner {
+  fill: #dff4ff;
+  stroke: #91b9d2;
+  stroke-width: 2;
+}
+
+.tutorial-svg__card {
+  stroke: var(--background-modifier-border);
+  stroke-width: 2;
+}
+
+.tutorial-svg__card--1 { fill: #fff9e8; }
+.tutorial-svg__card--2 { fill: #e5f1bd; }
+.tutorial-svg__card--3 { fill: #f7e8ed; }
+.tutorial-svg__icon { fill: #70bd8e; }
+.tutorial-svg__line {
+  stroke: #6f7f8d;
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+.tutorial-svg__line.is-muted {
+  opacity: 0.45;
+  stroke-width: 3;
+}
+.tutorial-svg__toolbar {
+  fill: #e5a257;
+  stroke: #b97835;
+  stroke-width: 2;
+}
+.tutorial-svg__toolbar-button {
+  fill: #fffdf2;
+  stroke: #dfc474;
+  stroke-width: 2;
+}
+
+.dashboard-home__tutorial-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-description {
+  min-height: 44px;
+  font-size: 15px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dashboard-home__tutorial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--background-modifier-border);
+}
+
+.dashboard-home__tutorial-dot.is-active {
+  width: 22px;
+  border-radius: var(--dashboard-node-radius);
+  background: var(--interactive-accent);
+}
+
+.dashboard-home__tutorial-actions {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.dashboard-home__tutorial-button {
+  min-height: 38px;
+  padding: 6px 16px;
+  border-radius: var(--dashboard-node-radius) !important;
+}
+
+.dashboard-home__tutorial-button.is-secondary {
+  margin-right: auto;
+}
+
+.dashboard-home__tutorial-button.is-primary {
+  background: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
+}
+
+@media (max-width: 760px) {
+  .dashboard-home__tutorial-modal .modal-content {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .dashboard-home__tutorial-title {
+    font-size: 20px;
+  }
 }
 
 .dashboard-home.dashboard-home--resolved-dark .dashboard-home__license-preview-panel {
