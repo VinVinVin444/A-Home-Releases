@@ -20097,6 +20097,14 @@ details:not([open]) .dashboard-home__collapse-icon {
   color: var(--text-muted);
 }
 
+.dashboard-home__license-preview-purchase-link {
+  display: block;
+  width: fit-content;
+  margin: 14px auto 0;
+  font-weight: 700;
+  text-align: center;
+}
+
 .dashboard-home__license-preview-actions {
   display: flex;
   align-items: center;
@@ -25757,10 +25765,10 @@ details:not([open]) .dashboard-home__collapse-icon {
 }
 .dashboard-home__planner-range-title { padding:7px 10px; border:1px solid rgba(195,212,235,.24); border-radius:var(--dashboard-node-radius); background:var(--planning-glass-panel); color:var(--dashboard-text); font-size:13px; font-weight:900; text-align:center; }
 .dashboard-home__planner-content.is-day { overflow:hidden; }
-.dashboard-home__planner-day-range,.dashboard-home__planner-week-range { display:none; grid-template-columns:auto minmax(180px,1fr); align-items:center; gap:10px; padding:8px 10px; border:1px solid rgba(195,212,235,.24); border-radius:var(--dashboard-node-radius); background:var(--planning-glass-panel); }
-.dashboard-home__planner-day-range.is-open,.dashboard-home__planner-week-range.is-open { display:grid; }
-.dashboard-home__planner-day-range-value,.dashboard-home__planner-week-range-value { min-width:92px; color:var(--dashboard-text); font-size:11px; font-weight:800; }
-.dashboard-home__planner-day-range input[type="range"],.dashboard-home__planner-week-range input[type="range"] { width:100%; margin:0; }
+.dashboard-home__planner-day-range,.dashboard-home__planner-week-range,.dashboard-home__planner-font-size-range { display:none; grid-template-columns:auto minmax(180px,1fr); align-items:center; gap:10px; padding:8px 10px; border:1px solid rgba(195,212,235,.24); border-radius:var(--dashboard-node-radius); background:var(--planning-glass-panel); }
+.dashboard-home__planner-day-range.is-open,.dashboard-home__planner-week-range.is-open,.dashboard-home__planner-font-size-range.is-open { display:grid; }
+.dashboard-home__planner-day-range-value,.dashboard-home__planner-week-range-value,.dashboard-home__planner-font-size-range-value { min-width:92px; color:var(--dashboard-text); font-size:11px; font-weight:800; }
+.dashboard-home__planner-day-range input[type="range"],.dashboard-home__planner-week-range input[type="range"],.dashboard-home__planner-font-size-range input[type="range"] { width:100%; margin:0; }
 .dashboard-home__planner-day-timeline { display:flex; min-height:0; flex:1; flex-direction:column; gap:8px; border-radius:var(--dashboard-node-radius)!important; overflow-y:auto; padding-right:2px; }
 .dashboard-home__planner-day-lane { display:grid; grid-template-columns:90px minmax(0,1fr); min-height:54px; border:1px solid rgba(195,212,235,.24); border-radius:var(--dashboard-node-radius); background:var(--planning-glass-panel); overflow:hidden; }
 .dashboard-home__planner-day-lane-title { display:flex; align-items:center; justify-content:center; padding:8px; border-right:1px solid rgba(195,212,235,.24); color:var(--dashboard-text); font-size:11px; font-weight:900; }
@@ -25821,7 +25829,7 @@ details:not([open]) .dashboard-home__collapse-icon {
   display:none;
 }
 .dashboard-home__planner-scheduled-blocks > .dashboard-home__planner-entry.is-duration-short .dashboard-home__planner-entry-body { gap:0; }
-.dashboard-home__planner-scheduled-blocks > .dashboard-home__planner-entry.is-duration-short .dashboard-home__planner-entry-body > small { font-size:7px; }
+.dashboard-home__planner-scheduled-blocks > .dashboard-home__planner-entry.is-duration-short .dashboard-home__planner-entry-body > small { font-size:calc(var(--planner-task-font-size,10px) * .7); }
 .dashboard-home__planner-scheduled-blocks > .dashboard-home__planner-entry.is-duration-short .dashboard-home__planner-entry-toggle {
   width:14px;
   min-width:14px;
@@ -25880,7 +25888,8 @@ details:not([open]) .dashboard-home__collapse-icon {
   background:#1b2838;
 }
 .dashboard-home.dashboard-home--resolved-dark .dashboard-home__planner-day-range,
-.dashboard-home.dashboard-home--resolved-dark .dashboard-home__planner-week-range { border-color:var(--dashboard-glass-border);background:#1b2838; }
+.dashboard-home.dashboard-home--resolved-dark .dashboard-home__planner-week-range,
+.dashboard-home.dashboard-home--resolved-dark .dashboard-home__planner-font-size-range { border-color:var(--dashboard-glass-border);background:#1b2838; }
 .dashboard-home.dashboard-home--resolved-dark .dashboard-home__planner :is(.dashboard-home__planner-day-lane-title,.dashboard-home__planner-hour-slot) {
   border-color:var(--dashboard-glass-border);
 }
@@ -25895,7 +25904,8 @@ details:not([open]) .dashboard-home__collapse-icon {
   background:#fffdf2;
 }
 .dashboard-home.dashboard-home--skin-island .dashboard-home__planner-day-range,
-.dashboard-home.dashboard-home--skin-island .dashboard-home__planner-week-range { border-color:rgba(82,126,76,.28);background:#fffdf2; }
+.dashboard-home.dashboard-home--skin-island .dashboard-home__planner-week-range,
+.dashboard-home.dashboard-home--skin-island .dashboard-home__planner-font-size-range { border-color:rgba(82,126,76,.28);background:#fffdf2; }
 .dashboard-home.dashboard-home--skin-island .dashboard-home__planner :is(.dashboard-home__planner-day-lane-title,.dashboard-home__planner-hour-slot) {
   border-color:rgba(82,126,76,.24);
 }
@@ -25942,8 +25952,8 @@ details:not([open]) .dashboard-home__collapse-icon {
 .dashboard-home__planner-week-day-track > .dashboard-home__planner-entry.is-week-scheduled-block { position:absolute; top:var(--planner-block-top); height:var(--planner-block-height); min-height:20px; z-index:5; box-sizing:border-box; padding:4px; overflow:hidden!important; }
 .dashboard-home__planner-week-day-track > .dashboard-home__planner-entry.is-duration-selected { z-index:8; border-color:rgba(79,142,232,.72)!important; box-shadow:inset 0 0 0 2px rgba(255,255,255,.5),0 0 0 2px rgba(79,142,232,.28)!important; }
 .dashboard-home__planner-week-day-track .dashboard-home__planner-entry-body span { display:none; }
-.dashboard-home__planner-week-day-track .dashboard-home__planner-entry-body strong { font-size:9px; }
-.dashboard-home__planner-week-day-track .dashboard-home__planner-entry-body small { font-size:7px; }
+.dashboard-home__planner-week-day-track .dashboard-home__planner-entry-body strong { font-size:var(--planner-task-font-size,10px); }
+.dashboard-home__planner-week-day-track .dashboard-home__planner-entry-body small { font-size:calc(var(--planner-task-font-size,10px) * .8); }
 .dashboard-home__planner-week-timeline.is-compact .dashboard-home__planner-week-time-rail,
 .dashboard-home__planner-week-timeline.is-compact .dashboard-home__planner-week-day-track {
   height:1248px;
@@ -26097,8 +26107,8 @@ details:not([open]) .dashboard-home__collapse-icon {
 .dashboard-home__planner-entry.is-completed .dashboard-home__planner-entry-toggle { background:#4f8ee8!important; }
 .dashboard-home__planner-entry-body { display:flex; min-width:0; flex-direction:column; gap:2px; }
 .dashboard-home__planner-entry-body strong,.dashboard-home__planner-entry-body .dashboard-home__planner-entry-title,.dashboard-home__planner-entry-body span,.dashboard-home__planner-entry-body small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.dashboard-home__planner-entry-body strong,.dashboard-home__planner-entry-body .dashboard-home__planner-entry-title { color:var(--dashboard-text); font-size:10px; font-weight:700; }
-.dashboard-home__planner-entry-body span,.dashboard-home__planner-entry-body small { color:var(--dashboard-muted); font-size:8px; }
+.dashboard-home__planner-entry-body strong,.dashboard-home__planner-entry-body .dashboard-home__planner-entry-title { color:var(--dashboard-text); font-size:var(--planner-task-font-size,10px); font-weight:700; }
+.dashboard-home__planner-entry-body span,.dashboard-home__planner-entry-body small { color:var(--dashboard-muted); font-size:calc(var(--planner-task-font-size,10px) * .8); }
 .dashboard-home__planner-all-tasks .dashboard-home__planner-entry-title { display:block; min-width:0; line-height:1.25; }
 .dashboard-home__planner-all-tasks .dashboard-home__planner-entry-title > p { display:inline; margin:0; }
 .dashboard-home__planner-all-tasks .dashboard-home__planner-entry-title a { color:inherit!important; font:inherit; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px; }
@@ -26167,6 +26177,7 @@ details:not([open]) .dashboard-home__collapse-icon {
     .dashboard-home__planner-range-title,
     .dashboard-home__planner-day-range,
     .dashboard-home__planner-week-range,
+    .dashboard-home__planner-font-size-range,
     .dashboard-home__planner-day-lane,
     .dashboard-home__planner-hours,
     .dashboard-home__planner-week-timeline,

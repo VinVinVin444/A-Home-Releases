@@ -1,0 +1,17 @@
+# Public release repository only
+/src/
+/scripts/
+/node_modules/
+/build/
+*.map
+data.json
+device.json
+a-license/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
