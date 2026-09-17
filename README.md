@@ -2,6 +2,32 @@
 
 All-in-one 个人工作台，在一个主页中集中管理看板、计划、任务、笔记、倒数日、进度与生活记录。
 
+## 界面预览
+
+### 亮色主题
+
+<p align="center">
+  <img src="assets/a-home-light-1.png" alt="A-Home 亮色主题界面一" width="49%">
+  <img src="assets/a-home-light-2.png" alt="A-Home 亮色主题界面二" width="49%">
+</p>
+
+<p align="center">
+  <img src="assets/a-home-light-3.png" alt="A-Home 亮色主题界面三" width="49%">
+  <img src="assets/a-home-light-4.png" alt="A-Home 亮色主题界面四" width="49%">
+</p>
+
+### 暗色主题
+
+<p align="center">
+  <img src="assets/a-home-dark.png" alt="A-Home 暗色主题界面" width="100%">
+</p>
+
+### 小岛主题
+
+<p align="center">
+  <img src="assets/a-home-island.png" alt="A-Home 小岛主题界面" width="100%">
+</p>
+
 ## 主要功能
 
 - 可自定义 Banner、主题、模块排序与主页布局。
