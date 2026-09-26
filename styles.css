@@ -29298,6 +29298,170 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     inset 0 0 0 4px var(--progress-manager-selected-group-inner, rgba(255, 255, 255, 0.86)) !important;
 }
 
+/* Progress manager mobile layout: one document scroll, no compressed desktop columns. */
+@media (max-width: 760px) {
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view) {
+    display: block;
+    height: 100%;
+    min-height: 0;
+    padding-bottom: max(18px, env(safe-area-inset-bottom, 0px));
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-header {
+    min-height: 0;
+    margin: 8px 8px 0;
+    padding: 12px;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-navigation-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 0;
+    margin: 8px 8px 0;
+    padding: 8px;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-navigation-actions {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-tool-separator {
+    align-self: center !important;
+    height: 28px !important;
+    min-height: 28px !important;
+    margin: 0 4px !important;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-home {
+    margin-left: auto;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+    min-height: 0;
+    padding: 8px;
+    overflow: visible;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    :is(
+      .dashboard-home__progress-manager-sidebar,
+      .dashboard-home__progress-editor,
+      .dashboard-home__progress-log-panel
+    ) {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 10px;
+    overflow: visible;
+    border: 1px solid var(--progress-manager-glass-border);
+    border-radius: var(--dashboard-node-radius) !important;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-group-header {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-group-title {
+    flex: 1 1 180px;
+    height: auto !important;
+    min-height: 40px;
+    white-space: normal;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-group-title strong,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-item-copy strong,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-item-copy small {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-group-actions {
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-item {
+    align-items: flex-start;
+    min-width: 0;
+    height: auto;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-manager-pin {
+    flex: 0 0 auto;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-editor-section-grid,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-editor-section-body,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-type-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-field,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-editor-section-body > .dashboard-home__progress-field,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-type-fields .dashboard-home__progress-field {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-editor-actions,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-editor-actions > div,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-log-header,
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    .dashboard-home__progress-log-header-actions {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
+    :is(input, select, textarea) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
 /* Fourth-section vertical tree: dynamic hierarchy connectors and consistent content centering. */
 .dashboard-home__checkins-content.is-vertical-mode {
   --checkins-tree-indent-step: 18px;
