@@ -1255,6 +1255,589 @@
   background: var(--background-primary-alt);
 }
 
+.dashboard-home__tutorial-group.is-island-series-promotion {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.dashboard-home__island-series-promotion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px;
+  border-style: solid;
+  border-width: 1px 1px 0.5px;
+  border-color: rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background-color: #f1f6fc;
+  background-image: linear-gradient(160deg, rgba(250, 252, 255, 0.98), rgba(233, 241, 253, 0.94));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-home__island-series-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.8fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.9));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-home__island-series-title {
+  color: #17365d;
+  font-size: 19px;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.dashboard-home__island-series-subtitle,
+.dashboard-home__island-series-slogan,
+.dashboard-home__island-series-card-summary,
+.dashboard-home__island-series-detail-summary,
+.dashboard-home__island-series-package-description {
+  color: #526b86;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.dashboard-home__island-series-subtitle {
+  margin-top: 3px;
+}
+
+.dashboard-home__island-series-slogan {
+  padding-left: 12px;
+  border-left: 2px solid rgba(112, 189, 142, 0.5);
+  color: #24547b;
+  font-weight: 750;
+}
+
+.dashboard-home__island-series-cards {
+  display: flex;
+  gap: 12px;
+  padding: 2px 2px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-gutter: stable;
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-home__island-series-card {
+  display: flex;
+  flex: 0 0 230px;
+  flex-direction: column;
+  min-width: 230px;
+  min-height: 250px;
+  padding: 12px;
+  scroll-snap-align: start;
+  border: 1px solid rgba(195, 212, 235, 0.22);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+  cursor: pointer;
+}
+
+.dashboard-home__island-series-card.is-selected {
+  border-color: rgba(188, 208, 234, 0.22);
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.84),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-home__island-series-card:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.84),
+    0 0 0 2px rgba(36, 84, 123, 0.32) !important;
+}
+
+.dashboard-home__island-series-card-header,
+.dashboard-home__island-series-detail-title {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 9px;
+  align-items: center;
+}
+
+.dashboard-home__island-series-card-icon,
+.dashboard-home__island-series-detail-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(203, 219, 239, 0.28);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 255, 0.92));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.dashboard-home__island-series-card-name,
+.dashboard-home__island-series-detail-name,
+.dashboard-home__island-series-package-name,
+.dashboard-home__island-series-packages-title {
+  color: #17365d;
+  font-weight: 850;
+}
+
+.dashboard-home__island-series-card-name,
+.dashboard-home__island-series-detail-name {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.dashboard-home__island-series-card-subtitle,
+.dashboard-home__island-series-detail-subtitle {
+  margin-top: 2px;
+  color: #61758b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-home__island-series-status,
+.dashboard-home__island-series-tag,
+.dashboard-home__island-series-package-recommended {
+  padding: 4px 7px;
+  border-style: solid;
+  border-width: 1px 1px 0.5px;
+  border-color: rgba(188, 208, 234, 0.22);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+  color: #526b86;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.dashboard-home__island-series-card-summary {
+  flex: 1 1 auto;
+  margin-top: 12px;
+}
+
+.dashboard-home__island-series-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.dashboard-home__island-series-card-actions,
+.dashboard-home__island-series-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.dashboard-home__island-series-card-actions .dashboard-home__island-series-action {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-right: 7px;
+  padding-left: 7px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.dashboard-home__island-series-action {
+  appearance: none;
+  min-height: 36px;
+  padding: 7px 10px;
+  outline: none;
+  border-style: solid !important;
+  border-width: 1px 1px 0.5px !important;
+  border-color: rgba(188, 208, 234, 0.22) !important;
+  border-radius: var(--dashboard-node-radius) !important;
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+  font-weight: 750;
+}
+
+.dashboard-home__island-series-action.is-primary,
+.dashboard-home__island-series-action:focus-visible {
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95)) !important;
+  color: #24547b !important;
+}
+
+.dashboard-home__island-series-action.is-status:disabled {
+  opacity: 1 !important;
+  cursor: default;
+}
+
+.dashboard-home__island-series-action.is-status.is-primary:disabled {
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  color: #6d7d8e !important;
+}
+
+.dashboard-home__island-series-action.is-owned:disabled {
+  border-color: rgba(112, 189, 142, 0.38) !important;
+  background: linear-gradient(180deg, rgba(245, 253, 241, 0.98), rgba(226, 242, 218, 0.95)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.84),
+    0 -1px 0 0 rgba(82, 126, 76, 0.22) !important;
+  color: #24547b !important;
+  opacity: 1 !important;
+  cursor: default;
+}
+
+.dashboard-home__island-series-detail,
+.dashboard-home__island-series-packages {
+  padding: 14px;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 255, 0.9));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-home__island-series-detail-title {
+  grid-template-columns: 42px minmax(0, 1fr);
+}
+
+.dashboard-home__island-series-detail-summary {
+  margin-top: 10px;
+}
+
+.dashboard-home__island-series-feature-list {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  color: #314f6f;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.dashboard-home__island-series-feature-list li + li {
+  margin-top: 4px;
+}
+
+.dashboard-home__island-series-integration {
+  margin-top: 12px;
+  padding: 9px 10px;
+  border: 1px dashed rgba(112, 189, 142, 0.52);
+  border-radius: var(--dashboard-node-radius);
+  background: rgba(229, 241, 189, 0.38);
+  color: #24547b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.dashboard-home__island-series-packages-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.dashboard-home__island-series-package-grid {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-home__island-series-package {
+  position: relative;
+  display: flex;
+  flex: 0 0 220px;
+  flex-direction: column;
+  min-width: 220px;
+  padding: 12px;
+  scroll-snap-align: start;
+  border: 1px solid rgba(195, 212, 235, 0.22);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
+}
+
+.dashboard-home__island-series-package.is-recommended {
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95));
+}
+
+.dashboard-home__island-series-package-recommended {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.dashboard-home__island-series-package-name {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-right: 54px;
+  font-size: 15px;
+}
+
+.dashboard-home__island-series-package-icon {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+.dashboard-home__island-series-package-description {
+  margin-top: 7px;
+}
+
+.dashboard-home__island-series-package-included {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 9px;
+  border: 1px solid rgba(195, 212, 235, 0.22);
+  border-radius: var(--dashboard-node-radius);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.dashboard-home__island-series-package-included-item {
+  color: #314f6f;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.dashboard-home__island-series-package-benefit {
+  margin-top: 8px;
+  padding: 7px 9px;
+  border: 1px dashed rgba(112, 189, 142, 0.52);
+  border-radius: var(--dashboard-node-radius);
+  background: rgba(229, 241, 189, 0.38);
+  color: #24547b;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.dashboard-home__island-series-package-pricing {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.dashboard-home__island-series-package-price {
+  color: #24547b;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.dashboard-home__island-series-package-original-price {
+  color: #8b98a6;
+  font-size: 12px;
+}
+
+.dashboard-home__island-series-package-reminder {
+  margin-top: 11px;
+  padding: 9px 11px;
+  border: 1px dashed rgba(188, 208, 234, 0.48);
+  border-radius: var(--dashboard-node-radius);
+  background: rgba(255, 255, 255, 0.56);
+  color: #526b86;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-promotion {
+  border-color: rgba(111, 143, 180, 0.38);
+  background-color: #182332;
+  background-image: linear-gradient(160deg, rgba(31, 45, 62, 0.98), rgba(20, 31, 45, 0.96));
+  box-shadow: inset 0 0 0 2px rgba(132, 162, 197, 0.08), 0 -1px 0 rgba(132, 162, 197, 0.18);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-heading,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-card,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-detail,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-packages,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package {
+  border-color: rgba(111, 143, 180, 0.32);
+  background: linear-gradient(180deg, rgba(43, 58, 77, 0.98), rgba(29, 42, 58, 0.96));
+  box-shadow: inset 0 0 0 2px rgba(158, 184, 214, 0.07), 0 -1px 0 rgba(132, 162, 197, 0.16);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-card.is-selected,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package.is-recommended {
+  background: linear-gradient(180deg, rgba(73, 62, 55, 0.98), rgba(52, 45, 43, 0.96));
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-card-icon,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-detail-icon,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-included {
+  border-color: rgba(111, 143, 180, 0.3);
+  background: linear-gradient(180deg, rgba(50, 67, 88, 0.98), rgba(35, 49, 67, 0.96));
+  box-shadow: inset 0 0 0 2px rgba(158, 184, 214, 0.07), 0 -1px 0 rgba(132, 162, 197, 0.16);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-title,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-card-name,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-detail-name,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-name,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-packages-title {
+  color: #e6eef8;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-subtitle,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-slogan,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-card-subtitle,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-detail-subtitle,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-card-summary,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-detail-summary,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-description,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-reminder {
+  color: #b6c6d9;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-feature-list,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-included-item {
+  color: #d4deea;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-status,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-tag,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-recommended,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-action {
+  border-color: rgba(111, 143, 180, 0.34) !important;
+  background: linear-gradient(180deg, rgba(55, 73, 95, 0.98), rgba(38, 53, 72, 0.96)) !important;
+  box-shadow: inset 0 0 0 2px rgba(158, 184, 214, 0.07), 0 -1px 0 rgba(132, 162, 197, 0.16) !important;
+  color: #d9e5f2 !important;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-action.is-primary {
+  background: linear-gradient(180deg, rgba(77, 67, 60, 0.98), rgba(55, 48, 46, 0.96)) !important;
+  color: #f1dfca !important;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-integration,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-benefit {
+  border-color: rgba(112, 189, 142, 0.38);
+  background: rgba(70, 112, 82, 0.22);
+  color: #c7e4cf;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-price {
+  color: #b9d5f0;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__island-series-package-original-price {
+  color: #91a1b2;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island {
+  --island-mint-soft: #d2e8bd;
+  --island-cream: #fffdf2;
+  --island-cream-soft: #fffbee;
+  --island-text: #5a3824;
+  --island-muted: #9a7958;
+  --island-highlight: rgba(255, 255, 242, 0.62);
+  --island-edge: rgba(82, 126, 76, 0.28);
+  --dashboard-island-sky: #dff4ff;
+  --dashboard-island-cream: #fff9e8;
+  --dashboard-island-grass: #e5f1bd;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-promotion {
+  border-color: rgba(82, 126, 76, 0.28);
+  background-color: var(--dashboard-island-sky);
+  background-image: linear-gradient(160deg, var(--dashboard-island-sky), var(--dashboard-island-cream), var(--dashboard-island-grass));
+  box-shadow: inset 0 0 0 2px var(--island-highlight), 0 -1px 0 var(--island-edge);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-heading,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-card,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-detail,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-packages,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package {
+  border-color: rgba(82, 126, 76, 0.28);
+  background: linear-gradient(180deg, var(--island-cream), var(--island-cream-soft));
+  box-shadow: inset 0 0 0 2px var(--island-highlight), 0 -1px 0 var(--island-edge);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-card.is-selected,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package.is-recommended {
+  background: linear-gradient(180deg, #f5fae4, var(--island-mint-soft));
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-card-icon,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-detail-icon,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-included {
+  border-color: rgba(82, 126, 76, 0.24);
+  background: linear-gradient(180deg, var(--island-cream), #f4f9df);
+  box-shadow: inset 0 0 0 2px var(--island-highlight), 0 -1px 0 var(--island-edge);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-title,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-card-name,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-detail-name,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-name,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-packages-title,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-feature-list,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-included-item {
+  color: var(--island-text);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-subtitle,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-card-subtitle,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-detail-subtitle,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-card-summary,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-detail-summary,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-description,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-reminder {
+  color: var(--island-muted);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-slogan,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-integration,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-benefit,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-price {
+  color: var(--island-text);
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-status,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-tag,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-recommended,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-action {
+  border-color: rgba(82, 126, 76, 0.28) !important;
+  background: linear-gradient(180deg, var(--island-cream), #eff6d8) !important;
+  box-shadow: inset 0 0 0 2px var(--island-highlight), 0 -1px 0 var(--island-edge) !important;
+  color: var(--island-text) !important;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-action.is-primary {
+  background: linear-gradient(180deg, #f5fae4, var(--island-mint-soft)) !important;
+  color: var(--island-text) !important;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-integration,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__island-series-package-benefit {
+  border-color: rgba(82, 126, 76, 0.34);
+  background: rgba(229, 241, 189, 0.56);
+}
+
 .dashboard-home__tutorial-group-title {
   margin-bottom: 9px;
   color: var(--text-normal);
@@ -1468,6 +2051,38 @@
     overflow: visible !important;
     text-overflow: clip !important;
     overflow-wrap: anywhere;
+  }
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-heading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-slogan {
+    padding-top: 8px;
+    padding-left: 0;
+    border-top: 1px solid rgba(195, 212, 235, 0.24);
+    border-left: 0;
+  }
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-card {
+    flex-basis: 250px;
+    min-width: 250px;
+    scroll-snap-align: center;
+  }
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-cards {
+    max-width: 320px;
+    scroll-snap-type: x mandatory;
+  }
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-package-grid {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-package {
+    flex-basis: auto;
+    min-width: 0;
   }
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-resize {
@@ -4643,6 +5258,19 @@
   contain: layout style;
 }
 
+.dashboard-home__weather-forecast-day > strong,
+.dashboard-home__weather-forecast-icon,
+.dashboard-home__weather-forecast-temps,
+.dashboard-home__weather-forecast-day > small {
+  display: block;
+  justify-self: stretch;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-inline: auto;
+  text-align: center;
+}
+
 .dashboard-home__weather-forecast-day > strong {
   color: var(--weather-text) !important;
   font-size: min(12px, 2.6cqw);
@@ -4660,7 +5288,7 @@
 .dashboard-home__weather-forecast-temps {
   display: grid;
   gap: min(3px, 0.65cqw);
-  justify-items: center;
+  place-items: center;
   font-size: min(12px, 2.6cqw);
 }
 
