@@ -52,6 +52,148 @@
   overflow-anchor: none;
 }
 
+/* Motto drawer refinements: compact banner label and complete theme surfaces. */
+.dashboard-home__motto-drawer .dashboard-home__motto-home-banner-toggle .dashboard-home__motto-action-label {
+  max-width: 52px;
+  font-size: 10px;
+  line-height: 1.15;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-home.dashboard-home--theme-light:not(.dashboard-home--skin-island) .dashboard-home__shared-module--motto .dashboard-home__motto-drawer-title-banner {
+  border-color: rgba(195, 212, 235, 0.24) !important;
+  background: linear-gradient(160deg, rgba(250, 252, 255, 0.98), rgba(233, 241, 253, 0.94)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+}
+
+.dashboard-home.dashboard-home--theme-light:not(.dashboard-home--skin-island) .dashboard-home__shared-module--motto .dashboard-home__motto-drawer-title-icon {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 255, 0.92)) !important;
+  color: #24547b !important;
+}
+
+.dashboard-home.dashboard-home--theme-light:not(.dashboard-home--skin-island) .dashboard-home__shared-module--motto .dashboard-home__motto-drawer-subtitle {
+  color: #617181 !important;
+}
+
+.dashboard-home.dashboard-home--theme-light:not(.dashboard-home--skin-island) .dashboard-home__shared-module--motto :is(
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-color: rgba(188, 208, 234, 0.22) !important;
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+}
+
+.dashboard-home.dashboard-home--theme-light:not(.dashboard-home--skin-island) .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-picker-menu {
+  border-color: rgba(195, 212, 235, 0.24) !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(239, 245, 255, 0.98)) !important;
+}
+
+.dashboard-home.dashboard-home--theme-light:not(.dashboard-home--skin-island) .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-picker-option.is-active {
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95)) !important;
+  color: #24547b !important;
+}
+
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-drawer-title-banner {
+  border-color: #50647c !important;
+  background: #2a3b50 !important;
+  box-shadow: none !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto :is(
+  .dashboard-home__motto-drawer-title-icon,
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-color: #50647c !important;
+  background: #304158 !important;
+  box-shadow: none !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto :is(
+  .dashboard-home__motto-drawer-subtitle,
+  .dashboard-home__motto-home-card-meta,
+  .dashboard-home__motto-home-group-tab-placeholder
+) {
+  color: #b8c9dc !important;
+}
+
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-picker-menu {
+  border-color: #50647c !important;
+  background: #223247 !important;
+  box-shadow: none !important;
+}
+
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-picker-option.is-active {
+  background: #3f5f85 !important;
+  color: #fff !important;
+}
+
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-card-action.is-danger {
+  border-color: #76515c !important;
+  background: #513b45 !important;
+  color: #ffccd2 !important;
+}
+
+.dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-drawer-title-banner {
+  border-color: rgba(223, 196, 116, 0.86) !important;
+  background: linear-gradient(135deg, #fffdf2, #fff0ce) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 242, 0.62) !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-home--skin-island .dashboard-home__shared-module--motto :is(
+  .dashboard-home__motto-drawer-title-icon,
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-color: rgba(159, 199, 149, 0.82) !important;
+  background: #fffdf2 !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-home--skin-island .dashboard-home__shared-module--motto :is(
+  .dashboard-home__motto-drawer-subtitle,
+  .dashboard-home__motto-home-card-meta,
+  .dashboard-home__motto-home-group-tab-placeholder
+) {
+  color: #9a7958 !important;
+}
+
+.dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-picker-menu {
+  border-color: rgba(159, 199, 149, 0.82) !important;
+  background: #fffbee !important;
+  box-shadow: none !important;
+}
+
+.dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-picker-option.is-active {
+  background: #d2e8bd !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-card-action.is-danger {
+  border-color: rgba(223, 101, 77, 0.46) !important;
+  background: #fff1e8 !important;
+  color: #b95743 !important;
+}
+
 .dashboard-home.dashboard-home--density-compact {
   --dashboard-shared-row-height: clamp(248px, 20.1vw, 316px);
   --dashboard-shared-padding: 8px 10px;
@@ -1034,11 +1176,17 @@
 }
 
 .dashboard-home__tutorial-window-visual-toggle,
-.dashboard-home__tutorial-window-close {
+.dashboard-home__tutorial-window-close,
+.dashboard-home__tutorial-window-mobile-back {
   width: 34px;
   height: 34px;
   padding: 0;
   border-radius: var(--dashboard-node-radius) !important;
+}
+
+.dashboard-home__tutorial-window-mobile-back,
+.dashboard-home__tutorial-mobile-directory {
+  display: none;
 }
 
 .dashboard-home__tutorial-window-visual-toggle {
@@ -1106,9 +1254,12 @@
 }
 
 .dashboard-home__tutorial-tab.is-active {
-  border-color: var(--interactive-accent) !important;
-  background: var(--interactive-accent) !important;
-  color: var(--text-on-accent) !important;
+  border-color: rgba(74, 126, 181, 0.58) !important;
+  background: linear-gradient(180deg, rgba(234, 245, 255, 0.98), rgba(207, 228, 250, 0.96)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.78),
+    0 -1px 0 rgba(74, 126, 181, 0.28) !important;
+  color: #17365d !important;
 }
 
 .dashboard-home__tutorial-tab.is-active .dashboard-home__tutorial-tab-index {
@@ -1197,9 +1348,36 @@
 }
 
 .dashboard-home__tutorial-directory-item.is-active {
-  border-color: var(--interactive-accent) !important;
-  background: var(--background-primary-alt) !important;
-  color: var(--text-normal) !important;
+  border-color: rgba(74, 126, 181, 0.58) !important;
+  background: linear-gradient(180deg, rgba(234, 245, 255, 0.98), rgba(207, 228, 250, 0.96)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.78),
+    0 -1px 0 rgba(74, 126, 181, 0.28) !important;
+  color: #17365d !important;
+}
+
+.dashboard-home__tutorial-directory-item.is-active .dashboard-home__tutorial-directory-index {
+  color: inherit;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__tutorial-tab.is-active,
+.dashboard-home__tutorial-window-host.dashboard-home--resolved-dark .dashboard-home__tutorial-directory-item.is-active {
+  border-color: rgba(116, 168, 224, 0.72) !important;
+  background: linear-gradient(180deg, rgba(61, 94, 137, 0.98), rgba(39, 67, 103, 0.98)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(177, 208, 241, 0.12),
+    0 -1px 0 rgba(116, 168, 224, 0.38) !important;
+  color: #f4f8ff !important;
+}
+
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__tutorial-tab.is-active,
+.dashboard-home__tutorial-window-host.dashboard-home--skin-island .dashboard-home__tutorial-directory-item.is-active {
+  border-color: rgba(82, 151, 91, 0.66) !important;
+  background: linear-gradient(180deg, rgba(238, 248, 218, 0.98), rgba(194, 226, 174, 0.98)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 242, 0.68),
+    0 -1px 0 rgba(82, 126, 76, 0.34) !important;
+  color: #4b3423 !important;
 }
 
 .dashboard-home__tutorial-directory-index {
@@ -1862,10 +2040,19 @@
   grid-template-columns: 42px minmax(0, 1fr);
   gap: 9px;
   align-items: start;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   padding: 8px;
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--dashboard-node-radius, 8px);
   background: var(--background-primary);
+}
+
+.dashboard-home__tutorial-icon-copy {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .dashboard-home__tutorial-icon-item + .dashboard-home__tutorial-icon-item {
@@ -1897,15 +2084,25 @@
 }
 
 .dashboard-home__tutorial-icon-name {
+  min-width: 0;
+  max-width: 100%;
   color: var(--text-normal);
   font-weight: 800;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .dashboard-home__tutorial-icon-description {
+  min-width: 0;
+  max-width: 100%;
   margin-top: 2px;
   color: var(--text-muted);
   font-size: 13px;
   line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .dashboard-home__tutorial-footer,
@@ -1953,63 +2150,122 @@
 }
 
 .dashboard-home__tutorial-window-host.is-mobile-layout {
-    position: fixed;
-    top: max(52px, calc(env(safe-area-inset-top, 0px) + 44px));
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: visible;
+  --dashboard-tutorial-native-toolbar-clearance: var(--mobile-navbar-height, var(--mobile-toolbar-height, 48px));
+  --dashboard-tutorial-bottom-clearance: calc(var(--dashboard-tutorial-native-toolbar-clearance) + 58px);
+  position: fixed;
+  top: max(52px, calc(env(safe-area-inset-top, 0px) + 12px));
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-titlebar {
-    grid-template-columns: minmax(0, 1fr) auto;
-    cursor: default;
-    touch-action: manipulation;
-  }
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "back name actions"
+    "search search search";
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: 7px;
+  min-height: 92px;
+  padding: 7px 8px;
+  cursor: default;
+  touch-action: manipulation;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-name {
-    display: none;
-  }
+  display: block;
+  grid-area: name;
+  align-self: center;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-mobile-back {
+  display: grid;
+  grid-area: back;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  font-size: 22px;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-title-actions {
+  grid-area: actions;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-visual-toggle {
+  display: none;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-close {
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-search {
-    justify-self: stretch;
-    width: 100%;
-  }
+  grid-area: search;
+  justify-self: stretch;
+  width: 100%;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window {
-    top: 0;
-    right: 8px;
-    bottom: max(8px, env(safe-area-inset-bottom, 0px));
-    left: 8px;
-    width: auto !important;
-    height: auto !important;
-    min-width: 0;
-    min-height: 0;
-    transform: none !important;
-  }
+  top: 0;
+  right: 6px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + var(--dashboard-tutorial-bottom-clearance));
+  left: 6px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+  min-height: 0;
+  transform: none !important;
+  contain: layout paint style;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-body {
-    grid-template-columns: 164px max-content;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    touch-action: pan-x pan-y;
-    -webkit-overflow-scrolling: touch;
-  }
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-tabs {
-    position: sticky;
-    left: 0;
-    z-index: 3;
-    width: 164px;
-    min-width: 164px;
-  }
+  grid-row: 1;
+  flex-direction: row;
+  width: 100%;
+  min-width: 0;
+  padding: 7px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-right: 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-tab {
-    height: auto !important;
-    min-height: 44px;
-    overflow: visible !important;
-  }
+  grid-template-columns: 26px auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 210px;
+  height: auto !important;
+  min-height: 44px;
+  scroll-snap-align: center;
+  overflow: visible !important;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-tab-label {
     min-width: 0;
@@ -2020,38 +2276,104 @@
   }
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-content {
-    grid-template-columns: 380px minmax(320px, 1fr);
-    width: max-content;
-    min-width: 720px;
-    padding: 10px;
-    overflow: visible;
-  }
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: minmax(0, 1fr);
+  gap: 0;
+  width: 100%;
+  min-width: 0 !important;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-content.has-directory {
-    grid-template-columns: 380px max-content minmax(320px, 1fr);
-  }
+  grid-template-rows: auto minmax(0, 1fr);
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-content.is-visual-hidden {
-    grid-template-columns: minmax(320px, 1fr);
-  }
+  grid-template-columns: minmax(0, 1fr) !important;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-content.has-directory.is-visual-hidden {
-    grid-template-columns: max-content minmax(320px, 1fr);
-    min-width: 542px;
-  }
+  grid-template-columns: minmax(0, 1fr) !important;
+  min-width: 0;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-visual {
+  display: none;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-directory {
+  grid-row: 1;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 7px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-width: 0 0 1px;
+  border-radius: 0;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-directory-title,
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-directory-section {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  margin: 0;
+  padding: 5px 7px;
+  border: 0;
+  white-space: nowrap;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-directory-section.is-secondary {
+  margin: 0 0 0 5px;
+  padding: 5px 7px;
+  border-top: 0;
+  border-left: 1px solid var(--background-modifier-border);
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-directory-item {
-    width: max-content;
-    min-width: 100%;
-    overflow: visible !important;
-  }
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 120px;
+  max-width: 220px;
+  min-height: 44px;
+  scroll-snap-align: center;
+  overflow: visible !important;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-directory-label {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    overflow-wrap: anywhere;
-  }
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-explanation {
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-content.has-directory .dashboard-home__tutorial-explanation {
+  grid-row: 2;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-heading {
     grid-template-columns: minmax(0, 1fr);
@@ -2071,9 +2393,10 @@
   }
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-cards {
-    max-width: 320px;
-    scroll-snap-type: x mandatory;
-  }
+  width: 100%;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__island-series-package-grid {
     flex-direction: column;
@@ -2086,11 +2409,30 @@
   }
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-window-resize {
-    display: none;
-  }
+  display: none;
+}
 
 .dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-footer {
-    min-width: 720px;
+  grid-row: 3;
+  grid-column: 1;
+  grid-template-columns: auto minmax(0, 1fr);
+  width: 100%;
+  min-width: 0;
+  padding: 7px 8px;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-navigation {
+  grid-column: 2;
+  justify-self: end;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-mobile-directory {
+  display: inline-flex;
+}
+
+.dashboard-home__tutorial-window-host.is-mobile-layout .dashboard-home__tutorial-button {
+  min-height: 40px;
+  padding: 6px 10px;
 }
 
 /* 底部工具栏配置窗口：桌面可拖动缩放，移动端固定在安全边距内。 */
@@ -2215,6 +2557,27 @@
 .dashboard-home__bottom-toolbar-config-host.is-mobile-layout .dashboard-home__bottom-toolbar-config-titlebar { cursor: default; touch-action: manipulation; }
 .dashboard-home__bottom-toolbar-config-host.is-mobile-layout .dashboard-home__bottom-toolbar-config-body { padding: 10px; }
 .dashboard-home__bottom-toolbar-config-host.is-mobile-layout .dashboard-home__bottom-toolbar-config-resize { display: none; }
+
+/* Ultrawide/system-scaled desktop: keep the visible window and pointer hit area in one untransformed coordinate space. */
+.dashboard-home__bottom-toolbar-config-host.is-ultrawide-layout .dashboard-home__bottom-toolbar-config-window {
+  top: 16px;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  width: min(680px, calc(100% - 32px)) !important;
+  height: min(620px, calc(100% - 32px)) !important;
+  min-width: 0;
+  min-height: 0;
+  margin: auto;
+  transform: none !important;
+}
+
+.dashboard-home__bottom-toolbar-config-host.is-ultrawide-layout .dashboard-home__bottom-toolbar-config-titlebar {
+  cursor: default;
+  touch-action: manipulation;
+}
+
+.dashboard-home__bottom-toolbar-config-host.is-ultrawide-layout .dashboard-home__bottom-toolbar-config-resize { display: none; }
 
 /* Desktop narrow-window fallback: preserve module card width and scroll only the rows horizontally. */
 @media (min-width: 761px) and (max-width: 1280px) {
@@ -2452,6 +2815,23 @@
 
 .dashboard-home.dashboard-home--density-relaxed .dashboard-home__shared-modules {
   grid-auto-rows: clamp(300px, 24vw, 380px) !important;
+}
+
+/* Ultrawide desktop: keep the row full-width, but grow its height more gently
+   than its width. This leaves enough room for every module without turning the
+   first row into an oversized banner on 3440px-class displays. */
+@media (min-width: 2241px) {
+  .dashboard-home.dashboard-home--density-compact .dashboard-home__shared-modules {
+    grid-auto-rows: clamp(316px, 13vw, 440px) !important;
+  }
+
+  .dashboard-home.dashboard-home--density-standard .dashboard-home__shared-modules {
+    grid-auto-rows: clamp(344px, 14vw, 480px) !important;
+  }
+
+  .dashboard-home.dashboard-home--density-relaxed .dashboard-home__shared-modules {
+    grid-auto-rows: clamp(380px, 15vw, 520px) !important;
+  }
 }
 
 .dashboard-home__shared-modules.is-section-hidden {
@@ -3352,18 +3732,312 @@
 }
 
 .dashboard-home__motto-home-manager {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
+  position: relative;
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
   gap: min(8px, 1.85cqw);
   padding: min(10px, 2.3cqw);
-  background:
-    radial-gradient(circle at 18% 14%, rgba(227, 236, 255, 0.84), transparent 24%),
-    radial-gradient(circle at 82% 18%, rgba(243, 247, 255, 0.95), transparent 28%),
-    linear-gradient(160deg, rgba(250, 252, 255, 0.985), rgba(233, 241, 253, 0.975));
+  background: #f3f8fe;
   overflow: auto;
+  contain: none;
+}
+
+.dashboard-home__motto-drawer-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 190;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.dashboard-home__motto-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 34, 28, 0.18);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: auto;
+}
+
+.dashboard-home__motto-drawer {
+  position: absolute;
+  inset-block: max(var(--dashboard-scroll-toolbar-clearance, 88px), env(safe-area-inset-top)) max(var(--dashboard-scroll-toolbar-clearance, 88px), env(safe-area-inset-bottom));
+  width: min(480px, calc(100% - 32px));
+  height: auto;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background: #f3f8fe;
+  box-shadow: 0 12px 30px rgba(44, 68, 49, 0.22);
+  transition: transform 220ms ease;
+  pointer-events: auto;
+  overflow: hidden;
+  container-type: normal;
+  contain: none;
+}
+
+.dashboard-home__motto-drawer-layer.is-left .dashboard-home__motto-drawer {
+  left: 12px;
+  transform: translateX(calc(-100% - 20px));
+}
+
+.dashboard-home__motto-drawer-layer.is-right .dashboard-home__motto-drawer {
+  right: 12px;
+  transform: translateX(calc(100% + 20px));
+}
+
+.dashboard-home__motto-drawer-layer.is-open .dashboard-home__motto-drawer {
+  transform: none;
+}
+
+.dashboard-home__motto-drawer-layer.is-open .dashboard-home__motto-drawer-backdrop {
+  opacity: 1;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-manager {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: var(--dashboard-node-radius);
+  overflow: hidden;
+  contain: none;
+}
+
+.dashboard-home__motto-drawer-side-choices {
+  display: contents;
+}
+
+.dashboard-home__motto-drawer-title-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(160deg, rgba(250, 252, 255, 0.98), rgba(233, 241, 253, 0.94));
+  color: #17365d;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+  overflow: hidden;
+}
+
+.dashboard-home__motto-drawer-title-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 255, 0.92));
+  color: #24547b;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.dashboard-home__motto-drawer-title-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dashboard-home__motto-drawer-subtitle {
+  color: #8c7256;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-home__motto-drawer-title-decoration {
+  font-size: 28px;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-manager-header {
+  display: block;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-manager-actions {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 2px 0 4px;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-panel-button,
+.dashboard-home__motto-home-add-group {
+  appearance: none;
+  display: inline-flex;
+  flex: 1 0 68px;
+  min-width: 68px;
+  min-height: 62px;
+  height: auto;
+  padding: 7px 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-style: solid;
+  border-width: 1px 1px 0.5px;
+  border-color: rgba(188, 208, 234, 0.22) !important;
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+  cursor: pointer;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-panel-button.is-active {
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95)) !important;
+  color: #24547b !important;
+}
+
+.dashboard-home__motto-action-icon {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.dashboard-home__motto-action-label {
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.dashboard-home__motto-drawer-tabs-row {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dashboard-home__motto-drawer-tabs-row .dashboard-home__motto-home-group-tabs {
+  flex: 1 1 auto;
+}
+
+.dashboard-home__motto-home-add-group {
+  flex: 0 0 72px;
+  min-width: 72px;
+  min-height: 48px;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-panel {
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  contain: none;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-cards,
+.dashboard-home__motto-drawer .dashboard-home__motto-home-cards.is-scrollable {
+  max-height: none;
+  overflow: visible;
+  contain: none;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-composer {
+  flex: 0 0 auto;
+}
+
+.dashboard-home__motto-drawer .dashboard-home__motto-home-card {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  contain: none;
+}
+
+.dashboard-home__motto-home-card-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dashboard-home__motto-home-card-action {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-style: solid;
+  border-width: 1px 1px 0.5px;
+  border-color: rgba(188, 208, 234, 0.22) !important;
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
+  color: #2f7048 !important;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dashboard-home__motto-home-card-action.is-danger {
+  color: #a34f47 !important;
+}
+
+@media (min-width: 1800px) and (min-aspect-ratio: 21/9) {
+  .dashboard-home__motto-drawer {
+    width: min(520px, 32vw);
+  }
+}
+
+@media (max-width: 760px) {
+  .dashboard-home__motto-drawer {
+    inset-block-start: max(var(--dashboard-scroll-toolbar-clearance, 106px), env(safe-area-inset-top));
+    inset-block-end: max(var(--dashboard-scroll-toolbar-clearance, 106px), env(safe-area-inset-bottom));
+    width: calc(100% - 20px);
+  }
+
+  .dashboard-home__motto-drawer-layer.is-left .dashboard-home__motto-drawer {
+    left: 10px;
+  }
+
+  .dashboard-home__motto-drawer-layer.is-right .dashboard-home__motto-drawer {
+    right: 10px;
+  }
+
+  .dashboard-home__motto-home-manager-header,
+  .dashboard-home__motto-home-manager-actions {
+    align-items: stretch;
+  }
+
+  .dashboard-home__motto-drawer-title-banner {
+    padding: 9px 10px;
+  }
+
+  .dashboard-home__motto-drawer-title-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .dashboard-home__motto-drawer-title-decoration {
+    font-size: 22px;
+  }
+
+  .dashboard-home__motto-drawer .dashboard-home__motto-home-panel-button {
+    flex-basis: 64px;
+    min-width: 64px;
+    min-height: 56px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-home__motto-drawer,
+  .dashboard-home__motto-drawer-backdrop {
+    transition: none;
+  }
 }
 
 .dashboard-home__motto-home-manager-header {
@@ -3824,17 +4498,99 @@
 
 .dashboard-home__motto-home-composer-label {
   color: #5c77a3;
-  font-size: min(10px, 4.2cqw);
+  font-size: 17px;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+.dashboard-home__motto-home-composer-header {
+  position: relative;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dashboard-home__motto-home-group-picker-wrap {
+  position: relative;
+  flex: 0 1 168px;
+  min-width: 0;
+}
+
+.dashboard-home__motto-home-group-picker,
+.dashboard-home__motto-home-group-picker-option {
+  appearance: none;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(188, 208, 234, 0.24) !important;
+  border-radius: var(--dashboard-node-radius) !important;
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.dashboard-home__motto-home-group-picker {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 10px;
+}
+
+.dashboard-home__motto-home-group-picker-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-home__motto-home-group-picker-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 6px);
+  z-index: 40;
+  display: none;
+  width: max(100%, 168px);
+  max-height: min(220px, 34vh);
+  padding: 5px;
+  overflow-y: auto;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(239, 245, 255, 0.98));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.76),
+    0 -1px 0 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-home__motto-home-group-picker-wrap.is-open .dashboard-home__motto-home-group-picker-menu {
+  display: grid;
+  gap: 4px;
+}
+
+.dashboard-home__motto-home-group-picker-option {
+  min-height: 34px;
+  padding: 6px 9px;
+  text-align: left;
+}
+
+.dashboard-home__motto-home-group-picker-option.is-active {
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95)) !important;
+  color: #24547b !important;
 }
 
 .dashboard-home__motto-home-compose-fields {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) 72px;
   gap: min(5px, 2.25cqw);
-  align-items: center;
+  align-items: stretch;
 }
 
 .dashboard-home__motto-home-file-fields {
@@ -3875,9 +4631,13 @@
 }
 
 .dashboard-home__motto-home-input {
-  padding: 0 min(7px, 3.2cqw);
+  height: 72px;
+  min-height: 72px;
+  padding: 10px 12px;
   border: 1px solid rgba(188, 208, 234, 0.24);
   background: rgba(255, 255, 255, 0.92);
+  line-height: 1.45;
+  resize: none;
   user-select: text;
 }
 
@@ -3892,7 +4652,15 @@
 }
 
 .dashboard-home__motto-home-compose-fields .dashboard-home__motto-home-input {
-  grid-column: 1 / -1;
+  grid-column: 1;
+}
+
+.dashboard-home__motto-home-compose-fields .dashboard-home__motto-home-add {
+  width: 72px;
+  height: 72px;
+  min-height: 72px;
+  padding: 0;
+  border-radius: var(--dashboard-node-radius) !important;
 }
 
 .dashboard-home__motto-home-file-input {
@@ -4123,7 +4891,7 @@
 .dashboard-home__shared-module--motto .dashboard-home__motto-home-manager {
   border: 1px solid rgba(195, 212, 235, 0.24) !important;
   background-color: #f3f8fe !important;
-  background-image: var(--motto-surface-gradient) !important;
+  background-image: none !important;
   box-shadow:
     inset 0 0 0 2px rgba(255, 255, 255, 0.76),
     0 -1px 0 0 rgba(167, 194, 226, 0.24) !important;
@@ -4182,6 +4950,13 @@
 .dashboard-home__shared-module--motto .dashboard-home__motto-home-card {
   content-visibility: auto;
   contain-intrinsic-block-size: auto 58px;
+}
+
+/* 抽屉内条目始终真实绘制；滚动后启用懒绘制会在高 DPI 超宽屏产生整层栅格模糊。 */
+.dashboard-home__motto-drawer .dashboard-home__motto-home-cards,
+.dashboard-home__motto-drawer .dashboard-home__motto-home-card {
+  content-visibility: visible !important;
+  contain-intrinsic-block-size: none !important;
 }
 
 .dashboard-home__shared-module--motto :is(
@@ -13610,7 +14385,7 @@ details:not([open]) .dashboard-home__collapse-icon {
 
 .dashboard-home__scroll-toolbar.has-plugin-launcher {
   overflow: visible;
-  transform: translateX(calc(-50% + 27px));
+  transform: translateX(-50%);
 }
 
 .dashboard-home__scroll-toolbar.has-theme-launcher {
@@ -13619,6 +14394,55 @@ details:not([open]) .dashboard-home__collapse-icon {
 
 .dashboard-home__scroll-toolbar.has-plugin-launcher.has-theme-launcher {
   transform: translateX(-50%);
+}
+
+/* Desktop auto-hide must not move the toolbar under the pointer. Switching
+   between the visible and hidden states now changes opacity only, so a click
+   keeps the same hit target even on ultrawide displays. */
+@media (min-width: 761px) {
+  .dashboard-home .dashboard-home__scroll-toolbar,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-plugin-launcher,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-theme-launcher,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-plugin-launcher.has-theme-launcher,
+  .dashboard-home .dashboard-home__scroll-toolbar.is-auto-hidden,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-plugin-launcher.is-auto-hidden,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-plugin-launcher.has-theme-launcher.is-auto-hidden {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* Chromium can desynchronise painted and hit-test coordinates for transformed
+   fixed/contained interaction layers on ultrawide compositing surfaces. Keep
+   these desktop-only controls in one untransformed coordinate space. */
+@media (min-width: 1200px) and (min-aspect-ratio: 21 / 9) {
+  .dashboard-home .dashboard-home__scroll-toolbar,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-plugin-launcher,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-theme-launcher,
+  .dashboard-home .dashboard-home__scroll-toolbar.has-plugin-launcher.has-theme-launcher,
+  .dashboard-home .dashboard-home__scroll-toolbar.is-auto-hidden {
+    right: 0 !important;
+    left: 0 !important;
+    width: max-content;
+    margin-inline: auto;
+    transform: none !important;
+  }
+
+  .dashboard-home .dashboard-home__theme-launcher-menu,
+  .dashboard-home .dashboard-home__plugin-launcher-menu {
+    right: auto;
+    left: -7px;
+    transform: none;
+  }
+
+  .dashboard-home .dashboard-home__hero-controls,
+  .dashboard-home .dashboard-home__hero-actions,
+  .dashboard-home .dashboard-home__shared-modules,
+  .dashboard-home .dashboard-home__shared-module--pomodoro,
+  .dashboard-home .dashboard-home__pomodoro-shell,
+  .dashboard-home .dashboard-home__shared-module--pomodoro .dashboard-home__pomodoro-manager {
+    contain: none;
+  }
 }
 
 .dashboard-home__theme-launcher {
@@ -15473,9 +16297,12 @@ details:not([open]) .dashboard-home__collapse-icon {
 .dashboard-home__pomodoro-ring-cap {
   position: absolute;
   top: 19%;
-  left: 50%;
+  right: 0;
+  left: 0;
   z-index: 2;
-  transform: translateX(-50%);
+  width: 100%;
+  transform: none;
+  text-align: center;
   font-size: min(38px, 7.85cqw);
   line-height: 1;
   filter: none;
@@ -20023,7 +20850,11 @@ details:not([open]) .dashboard-home__collapse-icon {
   transition: none !important;
 }
 
-:is(.theme-light .dashboard-home.dashboard-home--theme-follow, .dashboard-home.dashboard-home--theme-light) {
+:is(
+  .theme-light .dashboard-home.dashboard-home--theme-follow.dashboard-home--skin-default,
+  .dashboard-home.dashboard-home--theme-light.dashboard-home--skin-default,
+  .dashboard-home.dashboard-home--skin-island
+) {
   color-scheme: light;
 }
 
@@ -20501,6 +21332,7 @@ details:not([open]) .dashboard-home__collapse-icon {
 }
 
 .dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-tab.is-active,
+.dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-panel-button.is-active,
 .dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-banner-toggle.is-active,
 .dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default .dashboard-home__shared-module--motto .dashboard-home__motto-home-option-toggle.is-active {
   border-color: #607b9b !important;
@@ -20617,6 +21449,7 @@ details:not([open]) .dashboard-home__collapse-icon {
 }
 
 .dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-group-tab.is-active,
+.dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-panel-button.is-active,
 .dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-banner-toggle.is-active,
 .dashboard-home--skin-island .dashboard-home__shared-module--motto .dashboard-home__motto-home-option-toggle.is-active {
   background-color: #d2e8bd !important;
@@ -23653,7 +24486,7 @@ details:not([open]) .dashboard-home__collapse-icon {
 
 /* 六个分区工具栏分隔符由节点自身的 border-left 绘制，深色主题必须覆盖真实边线。 */
 .dashboard-home.dashboard-home--resolved-dark.dashboard-home--skin-default
-  :is(
+  & :is(
     .dashboard-home__navigation-directory-card,
     .dashboard-home__excalidraw-card,
     .dashboard-home__board-a-card,
@@ -26065,7 +26898,7 @@ details:not([open]) .dashboard-home__collapse-icon {
 }
 
 .dashboard-home__progress-manager-view:not(.dashboard-home__schedule-manager-view)
-  :is(
+  & :is(
     .dashboard-home__progress-manager-sidebar,
     .dashboard-home__progress-editor,
     .dashboard-home__progress-log-panel
@@ -26500,7 +27333,7 @@ details:not([open]) .dashboard-home__collapse-icon {
 }
 
 .dashboard-home__progress-manager-view.dashboard-home--skin-island:not(.dashboard-home__schedule-manager-view)
-  :is(
+  & :is(
     .dashboard-home__progress-manager-navigation-toolbar,
     .dashboard-home__progress-manager-sidebar,
     .dashboard-home__progress-editor
@@ -30183,26 +31016,148 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   }
 }
 
-/* Mobile has no stable hover/focus reveal: keep non-Banner action icons visible and tappable. */
-@media (max-width: 760px) {
-  .dashboard-home :is(
-    .dashboard-home__shared-module-settings,
-    .dashboard-home__task-icon-actions,
-    .dashboard-home__collapse-controls,
-    .dashboard-home__pomodoro-manager-trigger,
-    .dashboard-home__pomodoro-compact-actions,
-    .dashboard-home__schedule-period-reset,
-    .dashboard-home__progress-item-buttons,
-    .dashboard-home__checkins-category-action
+/* Mobile and ultrawide layouts share visibility only; use a flat selector so
+   older Obsidian Chromium versions do not depend on CSS nesting support. */
+.dashboard-home.dashboard-home--click-only-interactions :is(
+  .dashboard-home__shared-module-settings,
+  .dashboard-home__task-icon-actions,
+  .dashboard-home__collapse-controls,
+  .dashboard-home__pomodoro-manager-trigger,
+  .dashboard-home__pomodoro-compact-actions,
+  .dashboard-home__schedule-period-reset,
+  .dashboard-home__progress-item-buttons,
+  .dashboard-home__checkins-category-action
+) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.dashboard-home.dashboard-home--ultrawide-click-interactions
+  .dashboard-home__hero:not(.is-controls-revealed) :is(
+    .dashboard-home__hero-controls,
+    .dashboard-home__hero-credit
   ) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.dashboard-home.dashboard-home--ultrawide-click-interactions
+  .dashboard-home__hero.is-controls-revealed :is(
+    .dashboard-home__hero-controls,
+    .dashboard-home__hero-credit
+  ) {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Direct media-query fallback for Obsidian leaves created in another window realm. */
+@media (min-width: 1200px) and (min-aspect-ratio: 21 / 9) {
+  .dashboard-home :is(
+    .dashboard-home__nav-group-header,
+    .dashboard-home__board-a-column > .dashboard-home__section-row,
+    .dashboard-home__board-a-panel-title--active
+  ) > .dashboard-home__task-icon-actions {
+    display: flex !important;
     opacity: 1 !important;
     visibility: visible !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    transition: none !important;
+  }
+
+  .dashboard-home :is(
+    .dashboard-home__board-a-column > .dashboard-home__section-row,
+    .dashboard-home__board-a-panel-title--active
+  ) {
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    align-items: center !important;
+    column-gap: 5px;
+    height: auto;
+    min-height: 42px;
+    padding: 4px !important;
+    overflow: visible !important;
+  }
+
+  .dashboard-home .dashboard-home__board-a-column > .dashboard-home__section-row > .dashboard-home__nav-group-title-wrap,
+  .dashboard-home .dashboard-home__board-a-panel-title--active > .dashboard-home__collapse-label {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+  }
+
+  .dashboard-home :is(
+    .dashboard-home__board-a-column > .dashboard-home__section-row,
+    .dashboard-home__board-a-panel-title--active
+  ) > .dashboard-home__task-icon-actions--header-left {
+    position: static !important;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin: 0;
+    transform: none !important;
+  }
+
+  .dashboard-home :is(
+    .dashboard-home__board-a-column > .dashboard-home__section-row,
+    .dashboard-home__board-a-panel-title--active
+  ) > .dashboard-home__task-icon-actions--header-right {
+    position: static !important;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    margin: 0;
+    transform: none !important;
+  }
+
+  .dashboard-home .dashboard-home__progress-item-buttons:not(:empty) {
+    display: flex !important;
+    flex: 0 0 64px !important;
+    flex-basis: 64px !important;
+    width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    transition: none !important;
+  }
+
+  .dashboard-home .dashboard-home__hero:not(.is-controls-revealed) :is(
+    .dashboard-home__hero-controls,
+    .dashboard-home__hero-credit
+  ) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .dashboard-home .dashboard-home__hero.is-controls-revealed :is(
+    .dashboard-home__hero-controls,
+    .dashboard-home__hero-credit
+  ) {
+    opacity: 1 !important;
     pointer-events: auto !important;
   }
 
+  .dashboard-home .dashboard-home__card[data-section="notes"] .dashboard-home__note-node {
+    transition: none !important;
+  }
+
+  .dashboard-home .dashboard-home__card[data-section="notes"] .dashboard-home__note-node:is(:hover, :focus-within, .is-active) {
+    transform: scale(var(--notes-a-zoom)) !important;
+  }
+}
+
+/* Only mobile/narrow layouts need the touch-oriented three-column header layout. */
+.dashboard-home.dashboard-home--mobile-click-interactions {
   /* 目录、画板和第一分区的分组操作栏不能继续沿用桌面端绝对定位。
      固定显示后改为真实三列布局，视觉位置和触摸命中盒始终一致。 */
-  .dashboard-home :is(
+  :is(
     .dashboard-home__nav-group-header,
     .dashboard-home__board-a-column > .dashboard-home__section-row,
     .dashboard-home__board-a-panel-title--active
@@ -30217,11 +31172,11 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     overflow: visible !important;
   }
 
-  .dashboard-home :is(
+  :is(
     .dashboard-home__nav-group-header,
     .dashboard-home__board-a-column > .dashboard-home__section-row
   ) > .dashboard-home__nav-group-title-wrap,
-  .dashboard-home .dashboard-home__board-a-panel-title--active > .dashboard-home__collapse-label {
+  & .dashboard-home__board-a-panel-title--active > .dashboard-home__collapse-label {
     grid-column: 2;
     grid-row: 1;
     width: 100%;
@@ -30230,7 +31185,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     margin: 0;
   }
 
-  .dashboard-home :is(
+  & :is(
     .dashboard-home__nav-group-header,
     .dashboard-home__board-a-column > .dashboard-home__section-row,
     .dashboard-home__board-a-panel-title--active
@@ -30243,7 +31198,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     transform: none !important;
   }
 
-  .dashboard-home :is(
+  & :is(
     .dashboard-home__nav-group-header,
     .dashboard-home__board-a-column > .dashboard-home__section-row,
     .dashboard-home__board-a-panel-title--active
@@ -30256,7 +31211,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     transform: none !important;
   }
 
-  .dashboard-home .dashboard-home__task-icon-actions--rail > :is(button, .dashboard-home__icon-button) {
+  & .dashboard-home__task-icon-actions--rail > :is(button, .dashboard-home__icon-button) {
     position: relative;
     z-index: 2;
     box-sizing: border-box;
@@ -30267,25 +31222,25 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     -webkit-tap-highlight-color: transparent;
   }
 
-  .dashboard-home .dashboard-home__task-icon-actions--rail > :is(button, .dashboard-home__icon-button) > * {
+  & .dashboard-home__task-icon-actions--rail > :is(button, .dashboard-home__icon-button) > * {
     pointer-events: none;
   }
 
-  .dashboard-home .dashboard-home__progress-item-buttons:not(:empty) {
+  & .dashboard-home__progress-item-buttons:not(:empty) {
     flex-basis: 64px !important;
     width: 64px !important;
     max-width: 64px !important;
     overflow: visible !important;
   }
 
-  .dashboard-home :is(
+  & :is(
     .dashboard-home__pomodoro-compact-actions,
     .dashboard-home__schedule-period-reset
   ) {
     transform: none !important;
   }
 
-  .dashboard-home :is(
+  & :is(
     .dashboard-home__matrix-group-actions,
     .dashboard-home__matrix-label-actions
   ) {
@@ -30297,7 +31252,1050 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
     overflow: visible !important;
   }
 
-  .dashboard-home .dashboard-home__matrix-group-actions {
+  & .dashboard-home__matrix-group-actions {
     border-top-width: 1px !important;
   }
+}
+
+/* Final motto drawer theme layer: keep island surfaces independent from the light-theme base. */
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer .dashboard-home__motto-drawer-title-banner {
+  border-color: rgba(223, 196, 116, 0.86) !important;
+  background-color: #fffdf2 !important;
+  background-image: linear-gradient(135deg, #fffdf2, #fff0ce) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 242, 0.62) !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer .dashboard-home__motto-drawer-title-icon {
+  border-color: rgba(159, 199, 149, 0.82) !important;
+  background: #fffbee !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer :is(
+  .dashboard-home__motto-home-manager-header,
+  .dashboard-home__motto-home-manager-actions
+) {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer :is(
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-color: rgba(112, 157, 92, 0.58) !important;
+  background-color: #fffdf2 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer .dashboard-home__motto-home-group-picker-menu {
+  border-color: rgba(112, 157, 92, 0.58) !important;
+  background: #fffbee !important;
+  box-shadow: none !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer .dashboard-home__motto-home-group-tab:not(.is-active) {
+  border: 1px solid rgba(112, 157, 92, 0.58) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer :is(
+  .dashboard-home__motto-home-group-tab.is-active,
+  .dashboard-home__motto-home-group-picker-option.is-active,
+  .dashboard-home__motto-home-panel-button.is-active
+) {
+  border-color: rgba(112, 157, 92, 0.72) !important;
+  background-color: #d2e8bd !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-home.dashboard-home--skin-island .dashboard-home__motto-drawer .dashboard-home__motto-home-card-action.is-danger {
+  border-color: rgba(223, 101, 77, 0.46) !important;
+  background-color: #fff1e8 !important;
+  color: #b95743 !important;
+}
+
+/* The drawer owns one scroll viewport only; nested contained scroll layers blur text on high-DPI ultrawide layouts. */
+.dashboard-home__motto-drawer,
+.dashboard-home__motto-drawer .dashboard-home__motto-home-manager,
+.dashboard-home__motto-drawer .dashboard-home__motto-home-panel,
+.dashboard-home__motto-drawer .dashboard-home__motto-home-cards,
+.dashboard-home__motto-drawer .dashboard-home__motto-home-card {
+  filter: none !important;
+  backdrop-filter: none !important;
+  perspective: none !important;
+  backface-visibility: visible !important;
+  will-change: auto !important;
+}
+
+/* Standalone motto drawer v2: mounted at document level and isolated from the six-module layout. */
+.dashboard-motto-drawer-v2-layer {
+  --dashboard-node-radius: 8px;
+  --dashboard-motto-drawer-desktop-edge: 88px;
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+  pointer-events: none;
+  overflow: hidden;
+  isolation: auto;
+}
+
+.dashboard-motto-drawer-v2-layer :is(
+  .dashboard-motto-drawer-v2,
+  .dashboard-motto-drawer-v2__manager,
+  .dashboard-home__motto-drawer-title-banner,
+  .dashboard-home__motto-drawer-title-icon,
+  .dashboard-home__motto-home-manager-header,
+  .dashboard-home__motto-home-panel-button,
+  .dashboard-home__motto-drawer-tabs-row,
+  .dashboard-home__motto-home-group-tabs,
+  .dashboard-home__motto-home-group-tab,
+  .dashboard-home__motto-home-group-tab-count,
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-panel,
+  .dashboard-home__motto-home-card,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-composer,
+  .dashboard-home__motto-home-compose-pane,
+  .dashboard-home__motto-home-input,
+  .dashboard-home__motto-home-add,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-menu,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-radius: 8px !important;
+  clip-path: none !important;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  background: rgba(20, 34, 28, 0.18);
+}
+
+.dashboard-motto-drawer-v2 {
+  position: absolute;
+  top: 88px;
+  bottom: 88px;
+  width: 480px;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: var(--dashboard-node-radius);
+  background: #f3f8fe;
+  box-shadow: 0 12px 30px rgba(44, 68, 49, 0.22);
+  overflow: hidden;
+  pointer-events: auto;
+  container-type: normal;
+  contain: none;
+  transform: none;
+  transition: none;
+}
+
+.dashboard-motto-drawer-v2-layer.is-left .dashboard-motto-drawer-v2 {
+  left: var(--dashboard-motto-drawer-desktop-edge);
+  transform: none;
+}
+
+.dashboard-motto-drawer-v2-layer.is-right .dashboard-motto-drawer-v2 {
+  right: var(--dashboard-motto-drawer-desktop-edge);
+  transform: none;
+}
+
+.dashboard-motto-drawer-v2__manager {
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  contain: none;
+}
+
+.dashboard-motto-drawer-v2-layer :is(
+  .dashboard-home__motto-drawer-title-banner,
+  .dashboard-home__motto-home-manager-header,
+  .dashboard-home__motto-drawer-tabs-row,
+  .dashboard-home__motto-home-panel,
+  .dashboard-home__motto-home-composer,
+  .dashboard-home__motto-home-compose-pane,
+  .dashboard-home__motto-home-composer-header,
+  .dashboard-home__motto-home-compose-fields,
+  .dashboard-home__motto-home-cards,
+  .dashboard-home__motto-home-card
+) {
+  transform: none !important;
+  contain: none !important;
+  container-type: normal !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  perspective: none !important;
+  will-change: auto !important;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-drawer-title-banner {
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-manager-actions {
+  display: flex;
+  gap: 6px;
+  padding: 2px 0 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-panel-button,
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-add-group {
+  flex: 1 0 68px;
+  min-width: 68px;
+  min-height: 62px;
+  padding: 7px 6px;
+  font-size: 11px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-drawer-tabs-row {
+  display: flex;
+  gap: 8px;
+  min-height: 48px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-group-tabs {
+  flex: 1 1 auto;
+  gap: 6px;
+  padding: 4px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-group-tab {
+  flex: 1 0 96px;
+  min-height: 38px;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-add-group {
+  flex: 0 0 72px;
+  min-width: 72px;
+  min-height: 48px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-panel {
+  min-height: 0;
+  padding: 8px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-cards,
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-cards.is-scrollable {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 68px;
+  padding: 10px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-card-text {
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-card-action {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-compose-pane {
+  gap: 8px;
+  padding: 8px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-composer-label {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-group-picker-wrap {
+  flex-basis: 168px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-group-picker {
+  min-height: 36px;
+  font-size: 12px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-compose-fields {
+  grid-template-columns: minmax(0, 1fr) 72px;
+  gap: 6px;
+}
+
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-input,
+.dashboard-motto-drawer-v2-layer .dashboard-home__motto-home-add {
+  height: 72px;
+  min-height: 72px;
+  font-size: 13px;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-light .dashboard-motto-drawer-v2,
+.dashboard-motto-drawer-v2-layer.is-theme-light .dashboard-motto-drawer-v2__manager {
+  background: #f3f8fe !important;
+  color: #17365d !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-dark .dashboard-motto-drawer-v2,
+.dashboard-motto-drawer-v2-layer.is-theme-dark .dashboard-motto-drawer-v2__manager {
+  border-color: #465a72 !important;
+  background: #223247 !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-home__motto-drawer-title-banner,
+  .dashboard-home__motto-home-panel-button,
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-group-tabs,
+  .dashboard-home__motto-home-group-tab,
+  .dashboard-home__motto-home-panel,
+  .dashboard-home__motto-home-card,
+  .dashboard-home__motto-home-compose-pane,
+  .dashboard-home__motto-home-input,
+  .dashboard-home__motto-home-add,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-color: #50647c !important;
+  background: #304158 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-home__motto-home-group-tab.is-active,
+  .dashboard-home__motto-home-panel-button.is-active,
+  .dashboard-home__motto-home-group-picker-option.is-active
+) {
+  border-color: #607b9b !important;
+  background: #3f5f85 !important;
+  color: #fff !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-home__motto-home-manager-title,
+  .dashboard-home__motto-home-card-text,
+  .dashboard-home__motto-home-composer-label
+) {
+  color: #edf4ff !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-motto-drawer-v2,
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-motto-drawer-v2__manager {
+  border-color: rgba(82, 126, 76, 0.34) !important;
+  background: #b8d9aa !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-home__motto-drawer-title-banner {
+  border-color: rgba(223, 196, 116, 0.86) !important;
+  background: linear-gradient(135deg, #fffdf2, #fff0ce) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 242, 0.62) !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-home__motto-drawer-title-icon {
+  border-color: rgba(112, 157, 92, 0.58) !important;
+  background: #fffbee !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island :is(
+  .dashboard-home__motto-home-manager-title,
+  .dashboard-home__motto-drawer-subtitle,
+  .dashboard-home__motto-home-composer-label,
+  .dashboard-home__motto-home-card-text
+) {
+  color: #5a3824 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island :is(
+  .dashboard-home__motto-home-manager-header,
+  .dashboard-home__motto-home-manager-actions
+) {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island :is(
+  .dashboard-home__motto-home-panel-button,
+  .dashboard-home__motto-home-group-tabs,
+  .dashboard-home__motto-home-panel,
+  .dashboard-home__motto-home-card,
+  .dashboard-home__motto-home-compose-pane,
+  .dashboard-home__motto-home-input,
+  .dashboard-home__motto-home-add,
+  .dashboard-home__motto-home-add-group,
+  .dashboard-home__motto-home-card-action,
+  .dashboard-home__motto-home-group-picker,
+  .dashboard-home__motto-home-group-picker-option
+) {
+  border-color: rgba(112, 157, 92, 0.58) !important;
+  background: #fffdf2 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-home__motto-home-group-tab-count {
+  border: 1px solid rgba(112, 157, 92, 0.58) !important;
+  background: #eef4cf !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-home__motto-home-group-tab:not(.is-active) {
+  border: 1px solid rgba(112, 157, 92, 0.58) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island :is(
+  .dashboard-home__motto-home-group-tab.is-active,
+  .dashboard-home__motto-home-panel-button.is-active,
+  .dashboard-home__motto-home-group-picker-option.is-active
+) {
+  border-color: rgba(112, 157, 92, 0.72) !important;
+  background: #d2e8bd !important;
+  color: #3f7954 !important;
+}
+
+@media (max-width: 760px) {
+  .dashboard-motto-drawer-v2 {
+    top: max(58px, env(safe-area-inset-top));
+    bottom: max(58px, env(safe-area-inset-bottom));
+  }
+}
+
+.dashboard-motto-drawer-v2-layer.is-mobile-layout .dashboard-motto-drawer-v2 {
+  top: max(58px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  bottom: max(58px, env(safe-area-inset-bottom));
+  left: max(10px, env(safe-area-inset-left));
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+
+.dashboard-motto-drawer-v2-layer.is-mobile-layout .dashboard-motto-drawer-v2__manager {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+
+.dashboard-motto-drawer-v2-layer.is-mobile-layout .dashboard-home__motto-home-manager-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  overflow: visible;
+}
+
+.dashboard-motto-drawer-v2-layer.is-mobile-layout .dashboard-home__motto-home-panel-button {
+  min-width: 0;
+  width: 100%;
+}
+
+.dashboard-motto-drawer-v2-layer.is-mobile-layout .dashboard-home__motto-drawer-title-decoration {
+  font-size: 22px;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-light .dashboard-motto-drawer-v2__close {
+  border-color: rgba(205, 104, 104, 0.42) !important;
+  background: linear-gradient(180deg, #fff8f6, #ffe9e4) !important;
+  color: #a83f3f !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-dark .dashboard-motto-drawer-v2__close {
+  border-color: #8d5b68 !important;
+  background: #5a3d48 !important;
+  color: #ffd7dc !important;
+}
+
+.dashboard-motto-drawer-v2-layer.is-theme-island .dashboard-motto-drawer-v2__close {
+  border-color: rgba(223, 101, 77, 0.58) !important;
+  background: #ffe8dc !important;
+  color: #a94e3b !important;
+}
+
+/* Standalone pomodoro drawer: preserves timer data while isolating manager layout from the home card. */
+.dashboard-pomodoro-drawer-v2-layer {
+  --dashboard-node-radius: 8px;
+  --dashboard-pomodoro-drawer-edge: 88px;
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dashboard-pomodoro-drawer-v2__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 34, 28, 0.18);
+  pointer-events: auto;
+}
+
+.dashboard-pomodoro-drawer-v2 {
+  position: absolute;
+  top: 88px;
+  bottom: 88px;
+  width: 480px;
+  max-width: calc(100vw - 176px);
+  box-sizing: border-box;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  border-radius: 8px;
+  background: #f3f8fe;
+  box-shadow: 0 12px 30px rgba(44, 68, 49, 0.22);
+  overflow: hidden;
+  pointer-events: auto;
+  contain: none;
+  container-type: normal;
+  transform: none;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-left .dashboard-pomodoro-drawer-v2 {
+  left: var(--dashboard-pomodoro-drawer-edge);
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-right .dashboard-pomodoro-drawer-v2 {
+  right: var(--dashboard-pomodoro-drawer-edge);
+}
+
+.dashboard-pomodoro-drawer-v2__manager {
+  position: static;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto minmax(0, 1fr);
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #f3f8fe;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  contain: none;
+  container-type: normal;
+}
+
+.dashboard-pomodoro-drawer-v2-layer :is(
+  .dashboard-pomodoro-drawer-v2,
+  .dashboard-pomodoro-drawer-v2__manager,
+  .dashboard-pomodoro-drawer-v2__banner,
+  .dashboard-pomodoro-drawer-v2__banner-icon,
+  .dashboard-home__pomodoro-manager-header,
+  .dashboard-home__pomodoro-panel-button,
+  .dashboard-home__pomodoro-tabs,
+  .dashboard-home__pomodoro-tab,
+  .dashboard-home__pomodoro-task,
+  .dashboard-home__pomodoro-task-icon,
+  .dashboard-home__pomodoro-task-input,
+  .dashboard-home__pomodoro-actions,
+  .dashboard-home__pomodoro-action,
+  .dashboard-home__pomodoro-metrics-wrap,
+  .dashboard-home__pomodoro-metrics-reset,
+  .dashboard-home__pomodoro-metric,
+  .dashboard-home__pomodoro-metric-icon,
+  .dashboard-pomodoro-drawer-v2__recent,
+  .dashboard-pomodoro-drawer-v2__recent-row,
+  .dashboard-pomodoro-drawer-v2__recent-icon
+) {
+  border-radius: 8px !important;
+  clip-path: none !important;
+  contain: none !important;
+  container-type: normal !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+.dashboard-pomodoro-drawer-v2__banner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(195, 212, 235, 0.24);
+  background: linear-gradient(160deg, rgba(250, 252, 255, 0.98), rgba(233, 241, 253, 0.94));
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 rgba(167, 194, 226, 0.24);
+  color: #17365d;
+}
+
+.dashboard-pomodoro-drawer-v2__banner-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(239, 245, 255, 0.92));
+  font-size: 25px;
+}
+
+.dashboard-pomodoro-drawer-v2__banner-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.dashboard-pomodoro-drawer-v2__banner-title {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.dashboard-pomodoro-drawer-v2__banner-subtitle {
+  color: #617181;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard-pomodoro-drawer-v2__banner-decoration {
+  font-size: 24px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-manager-header {
+  display: block;
+  background: transparent;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-manager-actions {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-panel-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  min-width: 0;
+  height: 62px;
+  padding: 6px 4px;
+  font-size: 11px;
+  white-space: normal;
+}
+
+.dashboard-pomodoro-drawer-v2__tool-icon {
+  font-size: 19px;
+  line-height: 20px;
+}
+
+.dashboard-pomodoro-drawer-v2__tool-label {
+  line-height: 13px;
+  text-align: center;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-tabs {
+  gap: 6px;
+  padding: 6px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-tab {
+  min-height: 42px;
+  padding: 8px 6px;
+  font-size: 12px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-light .dashboard-home__pomodoro-tab.is-active {
+  color: #6f2f2b !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-task {
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-task-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-task-input {
+  min-height: 42px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-actions {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-action {
+  min-height: 56px;
+  padding: 7px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metrics-wrap {
+  align-content: stretch;
+  grid-template-rows: auto auto minmax(150px, 1fr);
+  gap: 8px;
+  height: 100%;
+  min-height: 0;
+  padding: 10px;
+  overflow: visible;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metrics-actions {
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metrics-reset {
+  padding: 6px 8px;
+  font-size: 11px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metrics {
+  gap: 6px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metric {
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 8px;
+  padding: 8px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metric-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+}
+
+.dashboard-pomodoro-drawer-v2__recent {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 8px;
+  min-height: 150px;
+  padding: 8px;
+  border: 1px solid rgba(195, 212, 235, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-pomodoro-drawer-v2__recent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  color: #17365d;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-header strong {
+  font-size: 13px;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-header small {
+  color: #617181;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-list {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-row {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 1px solid rgba(195, 212, 235, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.76);
+}
+
+.dashboard-pomodoro-drawer-v2__recent-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(180deg, rgba(255, 231, 225, 0.98), rgba(255, 214, 208, 0.92));
+  font-size: 16px;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-task,
+.dashboard-pomodoro-drawer-v2__recent-meta {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-task {
+  color: #17365d;
+  font-size: 12px;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-meta,
+.dashboard-pomodoro-drawer-v2__recent-empty {
+  color: #617181;
+  font-size: 11px;
+}
+
+.dashboard-pomodoro-drawer-v2__recent-empty {
+  display: grid;
+  place-items: center;
+  min-height: 88px;
+  padding: 12px;
+  text-align: center;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__manager {
+  border-color: #465a72 !important;
+  background: #223247 !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-pomodoro-drawer-v2__banner,
+  .dashboard-pomodoro-drawer-v2__banner-icon,
+  .dashboard-home__pomodoro-panel-button,
+  .dashboard-home__pomodoro-tabs,
+  .dashboard-home__pomodoro-tab,
+  .dashboard-home__pomodoro-task,
+  .dashboard-home__pomodoro-task-input,
+  .dashboard-home__pomodoro-action,
+  .dashboard-home__pomodoro-metrics-wrap,
+  .dashboard-home__pomodoro-metrics-reset,
+  .dashboard-home__pomodoro-metric,
+  .dashboard-pomodoro-drawer-v2__recent,
+  .dashboard-pomodoro-drawer-v2__recent-row,
+  .dashboard-pomodoro-drawer-v2__recent-icon
+) {
+  border-color: #50647c !important;
+  background: #304158 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-home__pomodoro-panel-button.is-active,
+  .dashboard-home__pomodoro-tab.is-active,
+  .dashboard-home__pomodoro-metrics-reset.is-active
+) {
+  border-color: #607b9b !important;
+  background: #3f5f85 !important;
+  color: #fff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-home__pomodoro-action--primary {
+  border-color: #d76962 !important;
+  background: linear-gradient(180deg, #ef7a70, #d95d57) !important;
+  color: #fff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__banner-subtitle {
+  color: #b8c9dc !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-pomodoro-drawer-v2__banner-title,
+  .dashboard-home__pomodoro-task-caption,
+  .dashboard-home__pomodoro-metrics-title,
+  .dashboard-home__pomodoro-metric-text strong,
+  .dashboard-home__pomodoro-metric-text small,
+  .dashboard-pomodoro-drawer-v2__recent-header,
+  .dashboard-pomodoro-drawer-v2__recent-task
+) {
+  color: #edf4ff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark :is(
+  .dashboard-pomodoro-drawer-v2__recent-header small,
+  .dashboard-pomodoro-drawer-v2__recent-meta,
+  .dashboard-pomodoro-drawer-v2__recent-empty
+) {
+  color: #b8c9dc !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__manager {
+  border-color: rgba(82, 126, 76, 0.34) !important;
+  background: #b8d9aa !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__banner {
+  border-color: rgba(223, 196, 116, 0.86) !important;
+  background: linear-gradient(135deg, #fffdf2, #fff0ce) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 242, 0.62) !important;
+  color: #5a3824 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island :is(
+  .dashboard-pomodoro-drawer-v2__banner-icon,
+  .dashboard-home__pomodoro-panel-button,
+  .dashboard-home__pomodoro-tabs,
+  .dashboard-home__pomodoro-tab,
+  .dashboard-home__pomodoro-task,
+  .dashboard-home__pomodoro-task-input,
+  .dashboard-home__pomodoro-action,
+  .dashboard-home__pomodoro-metrics-wrap,
+  .dashboard-home__pomodoro-metrics-reset,
+  .dashboard-home__pomodoro-metric,
+  .dashboard-pomodoro-drawer-v2__recent,
+  .dashboard-pomodoro-drawer-v2__recent-row,
+  .dashboard-pomodoro-drawer-v2__recent-icon
+) {
+  border-color: rgba(112, 157, 92, 0.58) !important;
+  background: #fffdf2 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island :is(
+  .dashboard-home__pomodoro-panel-button.is-active,
+  .dashboard-home__pomodoro-tab.is-active,
+  .dashboard-home__pomodoro-metrics-reset.is-active
+) {
+  border-color: rgba(112, 157, 92, 0.72) !important;
+  background: #d2e8bd !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-home__pomodoro-action--primary {
+  border-color: rgba(223, 101, 77, 0.68) !important;
+  background: linear-gradient(180deg, #ef806a, #df654d) !important;
+  color: #fffdf2 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__banner-subtitle {
+  color: #9a7958 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island :is(
+  .dashboard-pomodoro-drawer-v2__banner-title,
+  .dashboard-home__pomodoro-task-caption,
+  .dashboard-home__pomodoro-metrics-title,
+  .dashboard-home__pomodoro-metric-text strong,
+  .dashboard-home__pomodoro-metric-text small,
+  .dashboard-pomodoro-drawer-v2__recent-header,
+  .dashboard-pomodoro-drawer-v2__recent-task
+) {
+  color: #5a3824 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island :is(
+  .dashboard-pomodoro-drawer-v2__recent-header small,
+  .dashboard-pomodoro-drawer-v2__recent-meta,
+  .dashboard-pomodoro-drawer-v2__recent-empty
+) {
+  color: #9a7958 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-light .dashboard-pomodoro-drawer-v2__close {
+  border-color: rgba(205, 104, 104, 0.42) !important;
+  background: linear-gradient(180deg, #fff8f6, #ffe9e4) !important;
+  color: #a83f3f !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__close {
+  border-color: #8d5b68 !important;
+  background: #5a3d48 !important;
+  color: #ffd7dc !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__close {
+  border-color: rgba(223, 101, 77, 0.58) !important;
+  background: #ffe8dc !important;
+  color: #a94e3b !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2 {
+  top: max(58px, env(safe-area-inset-top));
+  right: max(10px, env(safe-area-inset-right));
+  bottom: max(58px, env(safe-area-inset-bottom));
+  left: max(10px, env(safe-area-inset-left));
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2__manager {
+  padding: 8px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-manager-actions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-actions,
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-metrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-metrics-header {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-metrics-actions {
+  justify-content: flex-start;
+  margin-left: 0;
 }
