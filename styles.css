@@ -31902,6 +31902,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
 /* Banner settings drawer: document-level, click-only and deliberately persistent for parameter tuning. */
 .dashboard-banner-drawer-v2-layer {
   --dashboard-banner-drawer-edge: 88px;
+  --dashboard-node-radius: 8px;
   position: fixed;
   inset: 0;
   z-index: 10020;
@@ -32060,6 +32061,24 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   overflow-y: auto;
   scrollbar-gutter: stable;
   contain: none;
+}
+
+/* Banner 抽屉挂在 document body 外，必须在自身作用域恢复节点圆角变量。 */
+.dashboard-banner-drawer-v2-layer :is(
+  .dashboard-banner-drawer-v2,
+  .dashboard-banner-drawer-v2__banner,
+  .dashboard-banner-drawer-v2__banner-icon,
+  .dashboard-banner-drawer-v2__action,
+  .dashboard-banner-drawer-v2__section,
+  .dashboard-banner-drawer-v2__group-icon,
+  .dashboard-banner-drawer-v2__section .dashboard-home__hero-module-switch,
+  .dashboard-banner-drawer-v2__section .dashboard-home__hero-height-slider,
+  .dashboard-banner-drawer-v2__section .dashboard-home__hero-height-slider-input,
+  .dashboard-banner-drawer-v2__section .dashboard-home__hero-motto-color-option,
+  .dashboard-banner-drawer-v2__section .dashboard-home__hero-motto-color-custom-button
+) {
+  border-radius: var(--dashboard-node-radius) !important;
+  clip-path: none !important;
 }
 
 .dashboard-banner-drawer-v2__section {
@@ -32691,7 +32710,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
 .dashboard-pomodoro-drawer-v2__manager {
   position: static;
   display: grid;
-  grid-template-rows: auto auto auto auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 8px;
   width: 100%;
   height: 100%;
@@ -32700,11 +32719,33 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   padding: 10px;
   box-sizing: border-box;
   background: #f3f8fe;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
+  overflow: hidden;
   contain: none;
   container-type: normal;
+}
+
+.dashboard-pomodoro-drawer-v2__content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: auto;
+}
+
+.dashboard-pomodoro-drawer-v2__content > .dashboard-home__pomodoro-metrics-wrap {
+  flex: 1 0 300px;
+}
+
+.dashboard-pomodoro-drawer-v2__content > :not(.dashboard-home__pomodoro-metrics-wrap) {
+  flex: 0 0 auto;
 }
 
 .dashboard-pomodoro-drawer-v2-layer :is(
@@ -32716,6 +32757,12 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   .dashboard-home__pomodoro-panel-button,
   .dashboard-home__pomodoro-tabs,
   .dashboard-home__pomodoro-tab,
+  .dashboard-pomodoro-drawer-v2__duration-settings input,
+  .dashboard-pomodoro-drawer-v2__advanced-settings,
+  .dashboard-pomodoro-drawer-v2__interval-setting,
+  .dashboard-pomodoro-drawer-v2__interval-setting input,
+  .dashboard-pomodoro-drawer-v2__auto-focus,
+  .dashboard-pomodoro-drawer-v2__auto-focus-choice,
   .dashboard-home__pomodoro-task,
   .dashboard-home__pomodoro-task-icon,
   .dashboard-home__pomodoro-task-input,
@@ -32788,7 +32835,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
 
 .dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-manager-actions {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 6px;
 }
 
@@ -32825,6 +32872,89 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   min-height: 42px;
   padding: 8px 6px;
   font-size: 12px;
+}
+
+.dashboard-pomodoro-drawer-v2__duration-settings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  min-width: 0;
+}
+
+.dashboard-pomodoro-drawer-v2__duration-settings input,
+.dashboard-pomodoro-drawer-v2__interval-setting input {
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 5px 7px;
+  border: 1px solid rgba(188, 208, 234, 0.22) !important;
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dashboard-pomodoro-drawer-v2__advanced-settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  min-width: 0;
+}
+
+.dashboard-pomodoro-drawer-v2__interval-setting,
+.dashboard-pomodoro-drawer-v2__auto-focus {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: stretch;
+  gap: 6px;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 1px solid rgba(195, 212, 235, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 rgba(167, 194, 226, 0.24);
+}
+
+.dashboard-pomodoro-drawer-v2__interval-setting > span,
+.dashboard-pomodoro-drawer-v2__auto-focus > span {
+  min-width: 0;
+  color: #17365d;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  text-align: center;
+}
+
+.dashboard-pomodoro-drawer-v2__auto-focus-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+}
+
+.dashboard-pomodoro-drawer-v2__auto-focus-choice {
+  appearance: none;
+  min-height: 34px;
+  padding: 5px 8px;
+  border-style: solid !important;
+  border-width: 1px 1px 0.5px !important;
+  border-color: rgba(188, 208, 234, 0.22) !important;
+  background: linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(232, 240, 252, 0.94)) !important;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.76), 0 -1px 0 rgba(167, 194, 226, 0.24) !important;
+  color: #17365d !important;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dashboard-pomodoro-drawer-v2__auto-focus-choice.is-active {
+  border-color: rgba(188, 208, 234, 0.22) !important;
+  background: linear-gradient(180deg, rgba(255, 250, 247, 0.98), rgba(252, 239, 230, 0.95)) !important;
+  color: #24547b !important;
 }
 
 .dashboard-pomodoro-drawer-v2-layer.is-theme-light .dashboard-home__pomodoro-tab {
@@ -32872,10 +33002,11 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   align-content: stretch;
   grid-template-rows: auto auto minmax(150px, 1fr);
   gap: 8px;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   min-height: 0;
   padding: 10px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .dashboard-pomodoro-drawer-v2-layer .dashboard-home__pomodoro-metrics-actions {
@@ -33007,7 +33138,8 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   gap: 8px;
-  min-height: 150px;
+  min-height: 0;
+  height: 100%;
   padding: 8px;
   border: 1px solid rgba(195, 212, 235, 0.22);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 255, 0.94));
@@ -33038,7 +33170,8 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   align-content: start;
   gap: 6px;
   min-height: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .dashboard-pomodoro-drawer-v2__recent-row {
@@ -33165,6 +33298,30 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   color: #b8c9dc !important;
 }
 
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__duration-settings input,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__advanced-settings,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__interval-setting,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__interval-setting input,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__auto-focus,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__auto-focus-choice {
+  border-color: #50647c !important;
+  background: #304158 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #edf4ff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__interval-setting > span,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__auto-focus > span {
+  color: #edf4ff !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-dark .dashboard-pomodoro-drawer-v2__auto-focus-choice.is-active {
+  border-color: #607b9b !important;
+  background: #3f5f85 !important;
+  color: #fff !important;
+}
+
 .dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2,
 .dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__manager {
   border-color: rgba(82, 126, 76, 0.34) !important;
@@ -33241,6 +33398,30 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   color: #9a7958 !important;
 }
 
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__duration-settings input,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__advanced-settings,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__interval-setting,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__interval-setting input,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__auto-focus,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__auto-focus-choice {
+  border-color: rgba(112, 157, 92, 0.58) !important;
+  background: #fffdf2 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #3f7954 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__interval-setting > span,
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__auto-focus > span {
+  color: #5a3824 !important;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-theme-island .dashboard-pomodoro-drawer-v2__auto-focus-choice.is-active {
+  border-color: rgba(112, 157, 92, 0.72) !important;
+  background: #d2e8bd !important;
+  color: #3f7954 !important;
+}
+
 .dashboard-pomodoro-drawer-v2-layer.is-theme-light .dashboard-pomodoro-drawer-v2__close {
   border-color: rgba(205, 104, 104, 0.42) !important;
   background: linear-gradient(180deg, #fff8f6, #ffe9e4) !important;
@@ -33273,6 +33454,21 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   padding: 8px;
 }
 
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2__content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2__content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2__content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(91, 132, 82, 0.62);
+}
+
 .dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-manager-actions {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -33285,6 +33481,14 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
 .dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-metrics-header {
   align-items: flex-start;
   flex-direction: column;
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2__advanced-settings {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-pomodoro-drawer-v2__auto-focus-choices {
+  min-width: 0;
 }
 
 .dashboard-pomodoro-drawer-v2-layer.is-mobile-layout .dashboard-home__pomodoro-metrics-actions {
