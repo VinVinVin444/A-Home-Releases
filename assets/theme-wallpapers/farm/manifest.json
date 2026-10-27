@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "theme": "farm",
+  "label": "农场",
+  "moduleCount": 6,
+  "totalBytes": 4056622,
+  "assets": [
+    {
+      "module": "calendar",
+      "file": "calendar.webp",
+      "bytes": 433692,
+      "sha256": "A64B6C276A123F8266FE1842F1DEB0E8F0D4D0D86B7D4F00F4521EB61EA57A9C"
+    },
+    {
+      "module": "weather",
+      "file": "weather.webp",
+      "bytes": 603818,
+      "sha256": "E6A4FD7D9C44784D2F66FB76576266AF74A72366209AF89D818D6A535B9234DE"
+    },
+    {
+      "module": "countdown",
+      "file": "countdown.jpg",
+      "bytes": 829297,
+      "sha256": "2E4238285024599F6CFECB21B6FC415554262031C47E427552B8FCF7DA480136"
+    },
+    {
+      "module": "pomodoro",
+      "file": "pomodoro.jpg",
+      "bytes": 679718,
+      "sha256": "0D4C1E625127F2A7DB54768D11623196C4B0D367477E83626FACAD5166742D4C"
+    },
+    {
+      "module": "motto",
+      "file": "motto.jpg",
+      "bytes": 760324,
+      "sha256": "D574F9F9C4188ADC0D611B9C894391C43BEBE1FF16A50E60CC3A5714465C9E64"
+    },
+    {
+      "module": "recent",
+      "file": "recent.jpg",
+      "bytes": 749773,
+      "sha256": "9116A7E3137ADA3F19A824E4B4666DEBB9CDF1C6DEC9B7B50A6806E7B04CE3D6"
+    }
+  ]
+}

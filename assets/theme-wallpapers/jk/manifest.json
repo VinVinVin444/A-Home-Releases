@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "theme": "jk",
+  "label": "JK",
+  "moduleCount": 6,
+  "totalBytes": 12890723,
+  "assets": [
+    {
+      "module": "calendar",
+      "file": "calendar.jpg",
+      "bytes": 431374,
+      "sha256": "A345E149CFBC0F9BCED5FD68CE990B6ED1C5C19CF5EAF4770EF354AD65AE5143"
+    },
+    {
+      "module": "weather",
+      "file": "weather.png",
+      "bytes": 2695485,
+      "sha256": "C2AEEB6B76190365E57CBA96CDEF06803EEA0B33826FB714F156FB9ECD93FEBF"
+    },
+    {
+      "module": "countdown",
+      "file": "countdown.png",
+      "bytes": 3540197,
+      "sha256": "3A9F228BC9EC57F131D764C8251EE585C5FEFD37470FF90F85B50BC29969EB7E"
+    },
+    {
+      "module": "pomodoro",
+      "file": "pomodoro.jpg",
+      "bytes": 325293,
+      "sha256": "7AC8B565B2F1D9263CD2E4F4FABA679B4B34834EDEBCFA693D41B0F6BCD9A5B3"
+    },
+    {
+      "module": "motto",
+      "file": "motto.png",
+      "bytes": 2901170,
+      "sha256": "A16BC9CD05D06848AD602CE0233FF7D254F417D5A4BD0E0D50EC9DE51244166D"
+    },
+    {
+      "module": "recent",
+      "file": "recent.png",
+      "bytes": 2997204,
+      "sha256": "99066EC8A84F6EBFBDE980128691AB2AB15B9C5A297E79A487563C61716B77F9"
+    }
+  ]
+}
