@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "group": "farm",
+  "label": "农场",
+  "count": 3,
+  "totalBytes": 9350640,
+  "assets": [
+    {
+      "id": "farm-001",
+      "name": "🌷 春野物语",
+      "file": "001.png",
+      "thumbnail": "thumbs/001.jpg",
+      "bytes": 2961678,
+      "sha256": "640DCCE9C4F0BCE2B7474DA6AFF925A3CE7435EEBA7B8771C16C1E7178B87248"
+    },
+    {
+      "id": "farm-002",
+      "name": "🌻 夏日溪畔",
+      "file": "002.png",
+      "thumbnail": "thumbs/002.jpg",
+      "bytes": 3284859,
+      "sha256": "8D4A5547D194E4807B0C68BEB83569C3E160C2DBB18A9D4132B6FA394A710958"
+    },
+    {
+      "id": "farm-003",
+      "name": "🍁 金秋牧歌",
+      "file": "003.png",
+      "thumbnail": "thumbs/003.jpg",
+      "bytes": 3104103,
+      "sha256": "D802085F809543AC0F5AEFC7FF5303B39AD0AF13F933BF83950B9DFFD80611A5"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "group": "ink",
+  "label": "水墨",
+  "count": 3,
+  "totalBytes": 9728820,
+  "assets": [
+    {
+      "id": "ink-001",
+      "name": "晨曦水墨山水与古寺瀑布",
+      "file": "001.png",
+      "thumbnail": "thumbs/001.jpg",
+      "bytes": 3151259,
+      "sha256": "5CF022CF007AFC46EE0FFF27A6603DE605E9FE912EB5988A834E4B40D32A0C2C"
+    },
+    {
+      "id": "ink-002",
+      "name": "雾岭竹溪与水榭晨光",
+      "file": "002.png",
+      "thumbnail": "thumbs/002.jpg",
+      "bytes": 3497465,
+      "sha256": "6D335E974CCBF232F0759661979B7337DC5BE95345F4EA064A5F25D7B871B82A"
+    },
+    {
+      "id": "ink-003",
+      "name": "云海仙山与金色天宫",
+      "file": "003.png",
+      "thumbnail": "thumbs/003.jpg",
+      "bytes": 3080096,
+      "sha256": "5F8B28647DC79016F84EB0D39CFCE6470AFEAA36EA5C4F5EAD6C186B496A9D6F"
+    }
+  ]
+}

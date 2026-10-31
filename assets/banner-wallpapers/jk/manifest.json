@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "group": "jk",
+  "label": "JK",
+  "count": 3,
+  "totalBytes": 7369263,
+  "assets": [
+    {
+      "id": "jk-001",
+      "name": "春日校园天台少女",
+      "file": "001.png",
+      "thumbnail": "thumbs/001.jpg",
+      "bytes": 2408965,
+      "sha256": "D023DE267237676BE00168B983B0CC52C6BBCB4F2D583F4D277357EBD2251EC6"
+    },
+    {
+      "id": "jk-002",
+      "name": "秋日校园台阶上的粉发少女",
+      "file": "002.png",
+      "thumbnail": "thumbs/002.jpg",
+      "bytes": 2632624,
+      "sha256": "BEA2B1FA82C1FFFE61CBC024BAF91EC11D557C94E2BDEE8809069524D8C2CAE8"
+    },
+    {
+      "id": "jk-003",
+      "name": "樱花窗畔的银发少女",
+      "file": "003.png",
+      "thumbnail": "thumbs/003.jpg",
+      "bytes": 2327674,
+      "sha256": "26D104083925C457AF0994E73131A69FBA98B0CE92C1EEEE67AFD5ADF9A83451"
+    }
+  ]
+}
