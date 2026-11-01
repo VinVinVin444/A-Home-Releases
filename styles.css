@@ -33889,6 +33889,18 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
   grid-column: 4;
   grid-row: 2;
 }
+.dashboard-banner-drawer-v2__appearance-section .dashboard-home__hero-module-order-button {
+  grid-column: 5;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  white-space: normal;
+}
+.dashboard-home__hero-module-order-icon { font-size: 18px; line-height: 1; }
+.dashboard-home__hero-module-order-label { font-size: 10px; line-height: 1.1; }
 
 .dashboard-banner-drawer-v2__utility-section .dashboard-home__hero-control-buttons,
 .dashboard-banner-drawer-v2__top-section .dashboard-home__hero-control-buttons,
@@ -40282,6 +40294,7 @@ body.theme-dark .dashboard-home.dashboard-home--theme-follow.dashboard-home--ski
 }
 :is(.dashboard-home__countdown-manager-view--skin-ink, .dashboard-home__countdown-manager-view--skin-farm, .dashboard-home__countdown-manager-view--skin-jk, [data-a-home-countdown-drawer].is-theme-ink, [data-a-home-countdown-drawer].is-theme-farm, [data-a-home-countdown-drawer].is-theme-jk, [data-a-home-countdown-drawer].is-theme-dark, [data-a-home-countdown-drawer].is-theme-island) :is(.dashboard-home__countdown-list-item.is-active strong, .dashboard-home__countdown-list-item.is-active small, .dashboard-home__countdown-smart-event:has(input:checked) > span) { color: var(--countdown-manager-active-text) !important; }
 :is(.dashboard-home__countdown-manager-view--skin-ink, .dashboard-home__countdown-manager-view--skin-farm, .dashboard-home__countdown-manager-view--skin-jk, [data-a-home-countdown-drawer].is-theme-ink, [data-a-home-countdown-drawer].is-theme-farm, [data-a-home-countdown-drawer].is-theme-jk, [data-a-home-countdown-drawer].is-theme-dark, [data-a-home-countdown-drawer].is-theme-island) :is(.dashboard-home__countdown-modal-title, .dashboard-weather-drawer-v2__banner-title, .dashboard-home__countdown-group-header, .dashboard-home__countdown-group-header strong, .dashboard-home__countdown-editor-section-title, .dashboard-home__countdown-field label, .dashboard-home__countdown-timeline-title, .dashboard-home__countdown-timeline-heading, .dashboard-home__countdown-list-item strong, .dashboard-home__countdown-app-popup-title, .dashboard-home__countdown-inline-confirm-title) { color: var(--countdown-manager-text) !important; }
+:is(.dashboard-home__countdown-manager-view--skin-ink, .dashboard-home__countdown-manager-view--skin-farm, .dashboard-home__countdown-manager-view--skin-jk, [data-a-home-countdown-drawer].is-theme-ink, [data-a-home-countdown-drawer].is-theme-farm, [data-a-home-countdown-drawer].is-theme-jk, [data-a-home-countdown-drawer].is-theme-dark, [data-a-home-countdown-drawer].is-theme-island) .dashboard-home__countdown-timeline-heading span { color: var(--countdown-manager-active) !important; }
 :is(.dashboard-home__countdown-manager-view--skin-ink, .dashboard-home__countdown-manager-view--skin-farm, .dashboard-home__countdown-manager-view--skin-jk, [data-a-home-countdown-drawer].is-theme-ink, [data-a-home-countdown-drawer].is-theme-farm, [data-a-home-countdown-drawer].is-theme-jk, [data-a-home-countdown-drawer].is-theme-dark, [data-a-home-countdown-drawer].is-theme-island) :is(.dashboard-weather-drawer-v2__banner-subtitle, .dashboard-home__countdown-modal-header p, .dashboard-home__countdown-editor-status, .dashboard-home__countdown-list-item small, .dashboard-home__countdown-timeline-meta, .dashboard-home__countdown-inline-confirm-description) { color: var(--countdown-manager-muted) !important; }
 :is(.dashboard-home__countdown-manager-view--skin-ink, .dashboard-home__countdown-manager-view--skin-farm, .dashboard-home__countdown-manager-view--skin-jk, [data-a-home-countdown-drawer].is-theme-ink, [data-a-home-countdown-drawer].is-theme-farm, [data-a-home-countdown-drawer].is-theme-jk, [data-a-home-countdown-drawer].is-theme-dark, [data-a-home-countdown-drawer].is-theme-island) .dashboard-home__countdown-smart-event input[type="checkbox"]:checked { border-color: var(--countdown-manager-active) !important; background: var(--countdown-manager-active) !important; }
 :is(.dashboard-home__countdown-manager-view--skin-ink, .dashboard-home__countdown-manager-view--skin-farm, .dashboard-home__countdown-manager-view--skin-jk, [data-a-home-countdown-drawer].is-theme-ink, [data-a-home-countdown-drawer].is-theme-farm, [data-a-home-countdown-drawer].is-theme-jk, [data-a-home-countdown-drawer].is-theme-dark, [data-a-home-countdown-drawer].is-theme-island) :is(.dashboard-home__countdown-inline-confirm-delete, .dashboard-home__countdown-birthday-remove) { border-color: var(--countdown-manager-danger) !important; color: var(--countdown-manager-danger) !important; }
